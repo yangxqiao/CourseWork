@@ -1,0 +1,12 @@
+sudo: false
+os: linux
+dist: trusty
+compiler: clang
+
+addons:
+  apt:
+    packages:
+      - libtbb-dev
+
+script:
+  - ./travis.sh
