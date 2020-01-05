@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/chelseaqiao/Desktop/xiaoyanq_CSCI201L_Assignment"/>
+	</list>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.project"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/chelseaqiao/Desktop/SleepingBarber"/>
+			<item value="/Users/chelseaqiao/Desktop/CS201FP/SeCurethatA"/>
+			<item value=""/>
+			<item value="/Users/chelseaqiao/Desktop/CS201/practice"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="/Users/chelseaqiao/Desktop/SleepingBarber (1).zip"/>
+			<item value="/Users/chelseaqiao/Desktop/Chatroom_MultiThreaded.zip"/>
+			<item value="/Users/chelseaqiao/Desktop/SleepingBarber.zip"/>
+			<item value="/Users/chelseaqiao/Desktop/Lab12_Web_Server_Skeleton.zip"/>
+			<item value="/Users/chelseaqiao/Desktop/ChatRoom_Serialization.zip"/>
+		</list>
+	</section>
+</section>

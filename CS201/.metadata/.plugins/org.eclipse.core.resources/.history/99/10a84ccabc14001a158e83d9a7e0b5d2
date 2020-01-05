@@ -1,0 +1,605 @@
+package gameRoom;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Vector;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+
+
+public class ServerGameThread extends Thread {
+
+	private PrintWriter pw;
+	private BufferedReader br;
+	private Server sr;
+	public String username = "";
+	public String password  = "";
+	public String gameName = "";
+	public String secretWord = "";
+
+	public Lock lock;
+	public Condition condition;
+	public boolean isFirst = false;
+	public boolean guessCorrect = false;
+	
+	public ServerGameThread(Socket s, Server sr, Lock lock, Condition condition) {
+		try 
+		{
+			this.sr = sr;
+			this.lock = lock;
+			this.condition = condition;
+			pw = new PrintWriter(s.getOutputStream());
+			br = new BufferedReader(new InputStreamReader(s.getInputStream()));
+			this.start();
+		} 
+		catch (IOException ioe) 
+		{
+			System.out.println("ioe in ServerThread constructor: " + ioe.getMessage());
+		}
+	}
+	
+
+	public void sendMessage(String message) {
+		pw.println(message);
+		pw.flush();
+	}
+
+
+	
+	public void login() {
+		try 
+		{
+			this.sendMessage("Username: ");
+			username = br.readLine();
+			this.sendMessage("Password: ");
+			password = br.readLine();
+			
+			String output = Util.getCurrentTime() + " <" + username + "> - trying to log in with password <" + password + ">."; 
+			sr.broadcast(output);
+			
+			while(!sr.checkNoRepeatLogin(username))
+			{
+				this.sendMessage("This username has already logged in.");
+				output = Util.getCurrentTime() + " <" + username + "> - failed to login because this username has already logged in."; 
+				sr.broadcast(output);
+				
+				this.sendMessage("Please provide username and password again.");
+				this.sendMessage("Username: ");
+				username = br.readLine();
+				this.sendMessage("Password: ");
+				password = br.readLine();
+				
+				output = Util.getCurrentTime() + " <" + username + "> - trying to log in with password <" + password + ">."; 
+				sr.broadcast(output);
+			}
+
+			if(sr.searchUser(username))
+			{
+				if(sr.checkUsernamePassword(username, password))
+				{
+					output = Util.getCurrentTime() + " <" + username + "> - successfully logged in.";
+					sr.broadcast(output);					
+				}
+				else {
+					output = Util.getCurrentTime() + " <" + username + "> has an account but not successfully logged in.";
+					sr.broadcast(output);
+							
+					while(!sr.checkUsernamePassword(username, password))
+					{
+						this.sendMessage("Username exists but invalid password given.");
+						this.sendMessage("Please provide password again.");
+						password = br.readLine();
+					}
+					output = Util.getCurrentTime() + " <" + username + "> - successfully logged in.";
+					sr.broadcast(output);	
+				}
+				
+				this.sendMessage("Great! You are now logged in as " + username + ". " + username + "’s Record");
+				this.sendMessage("--------------");
+				int win = sr.getWinNum(username);
+				int lose = sr.getLoseNum(username);
+				this.sendMessage("Wins – " + String.valueOf(win));
+				this.sendMessage("Losses – " + String.valueOf(lose));
+			}
+			else {
+				output = Util.getCurrentTime() + " <" + username + "> - does not have an account so not successfully logged in.";
+				sr.broadcast(output);
+				this.sendMessage("No account exists with those credentials.");
+				
+				this.sendMessage("Would you like to create a new account?");
+				String answer = br.readLine();
+				
+	
+				while(!answer.equals("yes"))
+				{
+					this.sendMessage("Would you like to create a new account?");
+					answer = br.readLine();
+				}
+				
+				if(answer.equals("yes"))
+				{
+					this.sendMessage("Would you like to use the username and password above?");
+					answer = br.readLine();
+					
+					while(!answer.equals("yes") && !answer.equals("no"))
+					{
+						this.sendMessage("Would you like to create a new account?");
+						answer = br.readLine();
+					}
+							
+					if(answer.equals("yes"))
+					{
+						sr.addUser(username, password);
+						this.sendMessage("Great! You are now logged in as " + username + ". " + username + "’s Record");
+						this.sendMessage("--------------");
+						this.sendMessage("Wins – 0");
+						this.sendMessage("Losses – 0");
+						
+						output = Util.getCurrentTime() + " <" + username + "> - created an account with password <" + password + ">.";
+						sr.broadcast(output);
+						output = Util.getCurrentTime() + " <" + username + "> - has record 0 wins and 0 losses.";
+						sr.broadcast(output);
+					}
+					else {
+						this.sendMessage("Please enter your new username and password.");
+						this.sendMessage("Username: ");
+						username = br.readLine();
+						this.sendMessage("Password: ");
+						password = br.readLine();
+						
+						sr.addUser(username, password);
+						this.sendMessage("Great! You are now logged in as " + username + ". " + username + "’s Record");
+						this.sendMessage("--------------");
+						this.sendMessage("Wins – 0");
+						this.sendMessage("Losses – 0");
+						
+						output = Util.getCurrentTime() + " <" + username + "> - created an account with password <" + password + ">.";
+						sr.broadcast(output);
+						output = Util.getCurrentTime() + " <" + username + "> - has record 0 wins and 0 losses.";
+						sr.broadcast(output);
+					}
+				}
+			}
+		}
+		catch (IOException ioe) 
+		{
+			System.out.println("ioe in ServerThread.run(): " + ioe.getMessage());
+		}
+	}
+	
+	
+	public synchronized void joinGame(String answer) {
+		try {
+			int choice = Integer.parseInt(answer);
+			sendMessage("What is the name of the game?");
+			gameName = br.readLine();
+
+			if(choice == 1)
+			{
+				String message = Util.getCurrentTime() + " <" + username + "> - wants to start a game called <" + gameName + ">.";
+				sr.broadcast(message);
+				
+				int numPlayer = 0;
+
+				while(sr.checkGameExist(gameName))
+				{
+					message = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> already exists, so unable to start <" + gameName + ">.";
+					sr.broadcast(message);
+					sendMessage(gameName + " already exists.");
+					sendMessage("Please provide another name for the game.");
+					gameName = br.readLine();
+					message = Util.getCurrentTime() + " <" + username + "> - wants to start a game called <" + gameName + ">.";
+					sr.broadcast(message);
+				}
+				
+
+				sendMessage("How many users will be playing (1-4)");
+				numPlayer = Integer.parseInt(br.readLine());
+				while(numPlayer > 4 || numPlayer < 0)
+				{
+					sendMessage("A game can only have between 1-4 players.");
+					sendMessage("How many users will be playing (1-4)");
+					numPlayer = Integer.parseInt(br.readLine());
+				}	
+				
+				while(sr.checkGameExist(gameName))
+				{
+					while(sr.checkGameExist(gameName))
+					{
+						message = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> already exists, so unable to start <" + gameName + ">.";
+						sr.broadcast(message);
+						sendMessage(gameName + " already exists.");
+						sendMessage("Please provide another name for the game.");
+						gameName = br.readLine();
+						message = Util.getCurrentTime() + " <" + username + "> - wants to start a game called <" + gameName + ">.";
+						sr.broadcast(message);
+					}
+					
+
+					sendMessage("How many users will be playing (1-4)");
+					numPlayer = Integer.parseInt(br.readLine());
+					while(numPlayer > 4 || numPlayer < 0)
+					{
+						sendMessage("A game can only have between 1-4 players.");
+						sendMessage("How many users will be playing (1-4)");
+						numPlayer = Integer.parseInt(br.readLine());
+					}	
+				}
+
+				sr.addGame(gameName, numPlayer, this);
+				message = Util.getCurrentTime() + " <" + username + "> - successfully started game <" + gameName + ">.";
+				isFirst = true;
+				sr.broadcast(message);
+				
+				message = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> needs <" + numPlayer + "> player(s) to start game.";
+				sr.broadcast(message);
+				
+				if(numPlayer == 1)
+				{
+					String message1 = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> has 1 so starting the game. Secret word is <" + sr.getSecretWord(gameName) + ">.";
+					sr.broadcast(message1);
+				}
+				
+				while(!sr.checkFull(gameName)) {
+					
+				}
+			}
+			else {
+				String message = Util.getCurrentTime() + " <" + username + "> - wants to join a game called <" + gameName + ">.";
+				sr.broadcast(message);
+				
+				boolean is_joined = false;
+				while(!is_joined)
+				{
+					while(!sr.checkGameExist(gameName))
+					{
+						message = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> doesn't exist, so unable to join <" + gameName + ">.";
+						sr.broadcast(message);
+						
+						sendMessage("There is no game with name " + gameName + ".");
+						sendMessage("Please provide another name for the game.");
+						gameName = br.readLine();
+						
+						message = Util.getCurrentTime() + " <" + username + "> - wants to join a game called <" + gameName + ">.";
+						sr.broadcast(message);
+					}
+					GameRoom myRoom = sr.getGameRoom(gameName);
+					if(sr.checkFull(gameName) || myRoom.is_playing)
+					{
+						message = Util.getCurrentTime() + " <" + username + "> - <" + gameName + "> exists, but <" + username + "> unable to join because maximum number of players have already joined <" + gameName + ">.";
+						sr.broadcast(message);
+						
+						sendMessage("The game " + gameName + " does not have space for another user to join.");
+						sendMessage("Please provide another name for the game.");
+						gameName = br.readLine();
+						
+						message = Util.getCurrentTime() + " <" + username + "> - wants to join a game called <" + gameName + ">.";
+						sr.broadcast(message);
+					}
+					else {
+						is_joined = true;
+					}
+				}
+				
+				if(is_joined)
+				{
+					message = Util.getCurrentTime() + " <" + username + "> - successfully joined game <" + gameName + ">.";
+					sr.broadcast(message);
+					sr.addPlayertoGame(gameName, this);
+					while(!sr.checkFull(gameName)) {
+						
+					}
+				}	
+			}
+			
+		}
+		catch (IOException ioe) 
+		{
+			System.out.println("ioe in ServerThread.run(): " + ioe.getMessage());
+		}
+	}
+
+	public void run() {
+		try 
+		{
+			this.login();
+			
+			sendMessage("\n");
+			sendMessage("1) Start a Game");
+			sendMessage("2) Join a Game");
+			sendMessage("Would you like to start a game or join a game?");
+			String answer = br.readLine();
+			while(!answer.equals("1") && !answer.equals("2"))
+			{
+				sendMessage("Please provide a valid response.");
+				sendMessage("1) Start a Game");
+				sendMessage("2) Join a Game");
+				sendMessage("Would you like to start a game or join a game?");
+				answer = br.readLine();
+			}
+			
+			this.joinGame(answer);
+			
+			String secretWord = sr.getSecretWord(gameName);
+			
+			
+			// start to play the game
+			sendMessage("All users have joined");
+			sendMessage("Determine secret word...");
+			GameRoom myRoom = sr.getGameRoom(gameName);
+			
+			myRoom.is_playing = true;
+			
+			String output =  "";
+			for(Integer i = 0; i < secretWord.length(); i++)
+			{
+				output += "_";
+				output += " ";
+			}
+			
+			sendMessage("Secret word: " + output);
+			sendMessage("You have " + sr.getGameRoom(gameName).numGuesses + " incorrect guesses remaining.");
+
+			if(isFirst)
+			{
+				sr.broadcastOtherPlayersOneRoom(myRoom, this, "Waiting for " + username + " to do something...");
+				sr.broadcastOtherPlayersOneRoom(myRoom, this, "");
+			}
+	
+			boolean is_over = false;
+			
+			while(!is_over)
+			{
+				lock.lock();
+				
+				Integer currPlayer = myRoom.currPlayer();
+				
+				if(currPlayer != 1)
+				{
+					if(!isFirst)
+					{
+						condition.await();
+					}
+					else {
+						isFirst = false;
+					}
+				}
+
+				this.sendMessage("1) Guess a letter.");
+				this.sendMessage("2) Guess the word.");
+				this.sendMessage("What would you like to do?");
+				
+				String lineString = br.readLine();
+				
+				while(!lineString.contains("1") && !lineString.contains("2"))
+				{
+					this.sendMessage("That is not a valid option.");
+					this.sendMessage("What would you like to do?");
+					lineString = br.readLine();
+				}
+				
+				if(lineString.contains("1"))
+				{
+					this.sendMessage("Letter to guess –");
+					String letterString = br.readLine();
+					sr.broadcast(Util.getCurrentTime() + " <" + gameName + "> <" + username + "> - guessed letter <" + letterString.charAt(0) + ">.");
+					
+					String message = username + " has guessed letter '" + letterString.charAt(0) + "'.";
+					sr.broadcastOtherPlayersOneRoom(myRoom, this, message);
+					
+					boolean inSecretWord = false;
+					for(Integer i = 0; i < secretWord.length(); i++)
+					{
+						if(secretWord.charAt(i) == letterString.charAt(0))
+						{
+							inSecretWord = true;
+							break;
+						}
+					}
+					
+					if(!inSecretWord)
+					{
+						sendMessage("The letter " + "'" + letterString.charAt(0) + "' is not in the secret word." );
+						
+						sr.getGameRoom(gameName).numGuesses -= 1;
+						if(sr.getGameRoom(gameName).numGuesses == 0)
+						{
+							is_over = true;
+						}
+						
+						output =  "";
+						for(Integer i = 0; i < myRoom.currMessage.length(); i++)
+						{
+							output += myRoom.currMessage.charAt(i);
+							output += " ";
+						}
+
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "The letter " + "'" + letterString.charAt(0) + "' is not in the secret word.");
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "Secret word: " + output);
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "You have " + sr.getGameRoom(gameName).numGuesses + " incorrect guess(es) remaining.");
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "");
+						sendMessage("Secret word: " + output);
+						sendMessage("You have " + sr.getGameRoom(gameName).numGuesses + " incorrect guess(es) remaining.");
+						sendMessage("");
+						
+						sr.broadcast(Util.getCurrentTime() + " <" + gameName + "> <" + username + "> - <" + letterString.charAt(0) + "> is not in <" + secretWord + ">. <" + gameName + "> now has <" + sr.getGameRoom(gameName).numGuesses +  "> guesses remaining.");
+						
+					}
+					else {
+						Vector<String> positionStrings = new Vector<String>();
+						sendMessage("The letter " + "'" + letterString + "' is in the secret word." );
+						String temp = "";
+						for(Integer i = 0; i < secretWord.length(); i++)
+						{
+							if(secretWord.charAt(i) == letterString.charAt(0))
+							{
+								temp += Character.toUpperCase(letterString.charAt(0));
+								positionStrings.add(Integer.toString(i));
+							}
+							else {
+								temp += myRoom.currMessage.charAt(i);
+							}
+						}
+						
+						myRoom.currMessage = temp;
+						
+						output =  "";
+						for(Integer i = 0; i < myRoom.currMessage.length(); i++)
+						{
+							output += myRoom.currMessage.charAt(i);
+							output += " ";
+						}
+						
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "The letter " + "'" + letterString.charAt(0) + "' is in the secret word.");
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "Secret word: " + output);
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "You have " + sr.getGameRoom(gameName).numGuesses + " incorrect guess(es) remaining.");
+						sr.broadcastOtherPlayersOneRoom(myRoom, this, "");
+						sendMessage("Secret word: " + output);
+						sendMessage("You have " + sr.getGameRoom(gameName).numGuesses + " incorrect guess(es) remaining.");
+						sendMessage("");
+						
+						String position = "";
+						for(Integer i = 0; i < positionStrings.size(); i++)
+						{
+							position += positionStrings.elementAt(i);
+							position += " ";
+						}		
+						
+						sr.broadcast(Util.getCurrentTime() + " <" + gameName + "> <" + username + "> - <" + letterString.charAt(0) + "> is in <" + secretWord + "> in position(s) <" + position + ">. Secret word now shows <" + output + ">.");			
+					}
+				}
+				else {
+					sendMessage("What is the secret word?");
+					String answerString = br.readLine();
+					sr.broadcast(Util.getCurrentTime() + " <" + gameName + "> <" + username + "> - guessed word <" + answerString + ">.");
+					
+					if(secretWord.equals(answerString))
+					{						
+						sendMessage("That is correct! You win!");
+						guessCorrect = true;
+						
+						Vector<ServerGameThread> allplayer =  myRoom.all_players;
+						String names = "";
+						for(ServerGameThread player : allplayer)
+						{
+							if(player != this)
+							{
+								names += player.username;
+								names += " ";
+							}
+						}
+						sr.broadcast(Util.getCurrentTime() + " <" + gameName + "> <" + username + "> - <" + answerString + "> is correct.");
+						sr.broadcast(Util.getCurrentTime() + " <" + username + "> wins game. <" + names + "> has/have lost the game.");
+						is_over = true;
+					}
+					else {	
+						sendMessage("That is incorrect! You lose!");
+						
+						sr.broadcast(gameName + " " + username + " - " + answerString + " is incorrect. ");
+						sr.broadcast(username + " has lost and is no longer in the game.");
+						
+						sendMessage("The word was " + "'" + secretWord + "'.");
+						
+						if(myRoom.all_players.size() != 1)
+						{
+							sr.broadcastOtherPlayersOneRoom(myRoom, this, username + " has guessed the word '" + answerString + "'.");
+							sr.broadcastOtherPlayersOneRoom(myRoom, this, username + " gussesed the word incorrectly. " + username + " is no longer in the game.");
+						}
+
+						is_over = true;
+					}
+				}
+				
+				if(is_over)
+				{
+					if(myRoom.numGuesses <= 0)
+					{
+						sr.broadcastToAllPlayerOneRoom(myRoom, "I am sorry. The number of incorrect guesses has been used up. You lose.");
+						
+						Vector<ServerGameThread> allplayers = myRoom.all_players;
+						for(ServerGameThread player : allplayers)
+						{
+							Integer winNum = sr.getWinNum(player.username);
+							Integer loseNum = sr.getLoseNum(player.username);
+							sr.updateRecord(player.username, winNum, loseNum+1);
+						}
+						
+						sr.broadcastNewRecords(myRoom);
+						
+						sr.broadcastToAllPlayerOneRoom(myRoom, "Thank you for playing Hangman!");	
+						sr.broadcast("The number of incorrect guesses has been used up. " + gameName + " is over.");
+						sr.removeServerGameThreads(myRoom);
+						sr.removeRoom(gameName);
+					}
+					else {
+						if(guessCorrect)
+						{
+							sr.broadcastOtherPlayersOneRoom(myRoom, this, username + " has guessed the word '" + secretWord + "'. " + username + " guessed the word correctly. You lose!");
+
+							
+							Vector<ServerGameThread> allplayers = myRoom.all_players;
+							for(ServerGameThread player : allplayers)
+							{
+								if(player != this)
+								{
+									Integer winNum = sr.getWinNum(player.username);
+									Integer loseNum = sr.getLoseNum(player.username);
+									sr.updateRecord(player.username, winNum, loseNum+1);
+								}
+							}
+	
+							Integer winNum = sr.getWinNum(username);
+							Integer loseNum = sr.getLoseNum(username);
+							sr.updateRecord(username, winNum+1, loseNum);
+							
+							sr.broadcastNewRecords(myRoom);
+
+							sr.broadcastToAllPlayerOneRoom(myRoom, "Thank you for playing Hangman!");
+							sr.removeServerGameThreads(myRoom);
+							sr.removeRoom(gameName);
+						}
+						else {
+							Integer winNum = sr.getWinNum(username);
+							Integer loseNum = sr.getLoseNum(username);
+							sr.updateRecord(username, winNum, loseNum+1);
+							
+							sr.removeServerGameThread(this);
+							sendMessage("\n");
+							sendMessage(username + "'s Record:");
+							sendMessage("--------------");
+							sendMessage("Wins - " + sr.getWinNum(username));
+							sendMessage("Loses - " + sr.getLoseNum(username));
+							
+							
+							if(myRoom.all_players.size() == 1)
+							{
+								sendMessage("Thank you for playing Hangman!");
+								sr.removeRoom(gameName);
+							}
+							else {
+								sr.broadcastWhenOnePlayerLose(myRoom, this);
+								sendMessage("Thank you for playing Hangman!");
+								sr.signalNextAndRemovePlayer(this, gameName);
+							}
+						}
+					}
+				}
+				
+				if(!is_over){
+					sr.signalNext(this, gameName);
+					lock.unlock();
+				}
+			}				
+		} 
+		catch (InterruptedException e)
+		{
+			System.out.println("InterruptedEception in ServerThread.run(): " + e.getMessage());
+		}
+		catch (IOException ioe) 
+		{
+			System.out.println("ioe in ServerThread.run(): " + ioe.getMessage());
+		}	
+	}
+}

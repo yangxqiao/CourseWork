@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;xiaoyanq_CSCI201L_Lab5/WebContent/myFrontEnd.jsp&apos; to &apos;invalidAnswer.jsp&apos;" description="Rename resource &apos;myFrontEnd.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/myFrontEnd.jsp" name="invalidAnswer.jsp" stamp="1569462892309" updateReferences="true"/>
+</session>

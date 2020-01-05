@@ -1,0 +1,84 @@
+h1{
+	font-size: 3.5em;
+	color: #ffcc99;
+	margin: 0px;
+}
+
+body{
+	margin: 0px;
+}
+
+#header{
+	height: 250px;
+	line-height: 250px;
+	background-color: #ffff66;	
+	text-align: center;
+	margin: 0px;
+	text-shadow: 3px 3px 3px #800000;
+}
+
+#main
+{
+	width: 960px; 
+	margin-right: auto;
+	margin-left: auto;
+	border: 3px solid #FFF;	
+	height: auto;
+	padding: 10px;
+	background-color: #ffffff;
+}
+
+#menuButton{
+	height: 130px;
+	padding: 0px 20px;
+	
+}
+
+.button{
+	width: 200px;
+	height: 50px;
+	margin-right: 30px;
+	margin-left: 30px;
+	background-color: #ffcc99;
+	float: left;
+	text-align: center;
+	border-radius: 20px;
+	line-height: 50px;
+	border: 1px solid black;
+	color: #ffffff;
+}
+
+img{
+	border-radius: 20px;
+}
+
+#footer{
+	text-align: center;
+	background-color: #ff6600;
+	color: #FFF;
+	height: 30px;
+	line-height: 30px;
+	font-size: 0.8em;
+}
+
+#form{
+	height: 150px;
+	width: 440px;
+	padding: 20px;
+	float: left;
+}
+
+#history{
+	height: 150px;
+	width: 440px;
+	padding: 20px;
+	float: left;
+}
+
+.clear{
+	clear: both;
+}
+
+h2{
+	margin: 0px;
+}

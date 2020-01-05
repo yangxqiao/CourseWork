@@ -1,0 +1,14 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+
+public class Contacts_Book {
+	
+	public static void main(String[] args)
+	{
+		System.out.print("What is the name of the contacts file?");
+		
+		
+	}
+	
+}

@@ -1,0 +1,100 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Contacts_Book {
+	private String _firstname;
+	private String _lastname;
+	private String _emailAdress;
+	private int _age;
+	private boolean _nearCampus;
+	private String _notes;
+	
+	public Contacts_Book(String firstname, String lastname, String emailAdress, 
+			int age, boolean nearCampus, String notes)
+	{
+		this._firstname = firstname;
+		this._lastname = lastname;
+		this._emailAdress = emailAdress;
+		this._age = age;
+		this._nearCampus = nearCampus;
+		this._notes = notes;		
+	}
+	
+	public void print()
+	{
+		System.out.println("Name: " + this._firstname + " " + this._lastname);
+		System.out.println("Email: " + this._emailAdress);
+		System.out.println("Age: " + this._age);
+		System.out.println("Near Campus: " + this._nearCampus);
+		System.out.println("Notes: " + this._notes);
+	}
+	
+	// a function check whether every char in a string is an alphabetic letter
+	public static void checkAllAlphabet(String name) throws IOException
+	{
+		for(int i = 0; i < name.length(); i++)
+		{
+			if(!(name.charAt(i) >= 'A' && name.charAt(i) <= 'Z') && !(name.charAt(i) >= 'a' && name.charAt(i) <= 'z'))
+			{
+				throw new IOException("The parameter \"" + name + "\" cannot be parsed as a name.");
+			}
+		}
+	}
+	
+	public static void trimHeadTrail(String myArr[])
+	{
+		for(int i = 0; i < myArr.length; i++)
+		{
+			myArr[i] = myArr[i].trim();
+		}
+	}
+
+	public static void main(String [] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("What is the name of the contacts file?");
+		String filename = input.nextLine();
+
+		FileReader fr;
+		BufferedReader br;
+		boolean canReadFile = false;
+		while(!canReadFile)
+		{
+			try {
+				fr = new FileReader(filename);
+				br = new BufferedReader(fr);
+				String line = br.readLine();
+				while(line != null)
+				{
+					String[] parse_arr = line.split(",");
+					trimHeadTrail(parse_arr);
+					if(parse_arr.length < 6)
+					{
+						throw new IOException("There are not enough parameters on line '" + line + "'.");
+					}
+					checkAllAlphabet(parse_arr[0]);
+					checkAllAlphabet(parse_arr[1]);
+					
+					line = br.readLine();
+				}
+				canReadFile = true;
+			}
+			catch(FileNotFoundException fnfe){
+				System.out.println("The file " + filename + " could not be found.");
+				System.out.print("What is the name of the contacts file?");
+				filename = input.nextLine();
+			}
+			catch(IOException ioe)
+			{
+				System.out.println("This file " + filename + " is not formatted properly.");
+				System.out.println(ioe.getMessage());
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,17 @@
+127.0.0.1 - - [25/Sep/2019:19:20:54 -0700] "GET / HTTP/1.1" 200 11330
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:20:56 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 200 356
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:21:06 -0700] "GET /my_servlet?fname=Xiaoyang&lname=Qiao&submit=Submit HTTP/1.1" 404 1084
+127.0.0.1 - - [25/Sep/2019:19:21:22 -0700] "GET / HTTP/1.1" 200 11330
+127.0.0.1 - - [25/Sep/2019:19:22:43 -0700] "GET / HTTP/1.1" 200 11330
+127.0.0.1 - - [25/Sep/2019:19:22:56 -0700] "GET / HTTP/1.1" 200 11330
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:23:15 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 200 376
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:23:23 -0700] "GET /my_servlet?fname=Xiaoyang+&lname=Qiao&submit=Submit HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:24:33 -0700] "GET /my_servlet?fname=Xiao&lname=Qiao&submit=Submit HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:25:02 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 200 376
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:26:59 -0700] "GET /my_servlet?fname=x&lname=J&submit=Submit HTTP/1.1" 404 1084
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:31:23 -0700] "GET /my_servlet?fname=x&lname=J&submit=Submit HTTP/1.1" 404 1084
+127.0.0.1 - - [25/Sep/2019:19:41:06 -0700] "GET / HTTP/1.1" 200 11330
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:41:08 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 200 489
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:42:30 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 500 2757
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:44:05 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 200 492
+0:0:0:0:0:0:0:1 - - [25/Sep/2019:19:46:29 -0700] "GET /xiaoyanq_CSCI201L_Lab5/invalidAnswer.jsp HTTP/1.1" 500 3182

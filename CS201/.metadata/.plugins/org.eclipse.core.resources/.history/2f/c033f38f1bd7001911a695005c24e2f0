@@ -1,0 +1,25 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class Contacts_Book {
+	private String firstname;
+	private String lastname;
+	private String emailAdress;
+	private int age;
+	private boolean nearCampus;
+	private String notes;
+	
+	// static String equalsIgnoreCase(String another)
+	public static void main(String[] args)
+	{
+		System.out.print("What is the name of the contacts file?");
+		Scanner in = new Scanner(System.in);
+		
+		
+	}
+	
+}

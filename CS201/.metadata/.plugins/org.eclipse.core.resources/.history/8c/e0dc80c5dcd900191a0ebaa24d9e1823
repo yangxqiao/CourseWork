@@ -1,0 +1,137 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Contacts_Book {
+	private String _firstname;
+	private String _lastname;
+	private String _emailAdress;
+	private int _age;
+	private boolean _nearCampus;
+	private String _notes;
+	
+	public Contacts_Book(String firstname, String lastname, String emailAdress, 
+			int age, boolean nearCampus, String notes)
+	{
+		this._firstname = firstname;
+		this._lastname = lastname;
+		this._emailAdress = emailAdress;
+		this._age = age;
+		this._nearCampus = nearCampus;
+		this._notes = notes;		
+	}
+	
+	public String getFirstname(){
+		return this._firstname;
+	}
+	public String getLastname()
+	{
+		return this._lastname;
+	}
+	public String getEmailAddress()
+	{
+		return this._emailAdress;
+	}
+	public int getAge()
+	{
+		return this._age;
+	}
+	public boolean getNearCampus()
+	{
+		return this._nearCampus;
+	}
+	public String getNotes()
+	{
+		return this._notes;
+	}
+	
+	public void print()
+	{
+		System.out.println("Name: " + this._firstname + " " + this._lastname);
+		System.out.println("Email: " + this._emailAdress);
+		System.out.println("Age: " + this._age);
+		System.out.println("Near Campus: " + this._nearCampus);
+		System.out.println("Notes: " + this._notes);
+	}
+	
+	// a function check whether every char in a string is an alphabetic letter
+	public static boolean checkAllAlphabet(String name)
+	{
+		for(int i = 0; i < name.length(); i++)
+		{
+			if(!(i >= 'A' && i <= 'Z') && !(i >= 'a' && i <= 'z'))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	// a function check whether the format of email address is correct
+	public static boolean checkEmailAddress(String email) throws IOException
+	{
+		int emailLength = email.length();
+		String lastFourDigit = email.substring(emailLength-4);
+		if((lastFourDigit != ".edu") && (lastFourDigit != ".com") && (lastFourDigit != ".net"))
+		{
+			throw new IOException("xxx");
+		}
+		int index = email.indexOf("@");
+		if((index == -1) || (emailLength - 4 - index) <= 1)
+		{
+			return new IOException("xxx");
+		}
+		return true;
+	}
+	
+	// static String equalsIgnoreCase(String another)
+	public static void main(String [] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("What is the name of the contacts file?");
+		String filename = input.nextLine();
+		FileReader fr;
+		BufferedReader br;
+		try {
+			fr = new FileReader(filename);
+			br = new BufferedReader(fr);
+			String line = br.readLine();
+			while(line != null)
+			{
+				String[] parse_arr = line.split(",");
+				if(parse_arr.length < 6)
+				{
+					throw new IOException("Too few parameters on one of the lines.");
+				}
+				if(!checkAllAlphabet(parse_arr[0]))
+				{
+					throw new IOException("Data cannot be converted to the proper type as shown above.");
+				}
+				if(!checkAllAlphabet(parse_arr[1]))
+				{
+					throw new IOException("Data cannot be converted to the proper type as shown above.");
+				}
+				if(!checkEmailAddress(parse_arr[2]))
+				{
+					throw new IOException("Data cannot be converted to the proper type as shown above.");
+				}
+				
+				line = br.readLine();
+			}
+		}
+		catch(FileNotFoundException fnfe){
+			System.out.println("File not found.");
+		}
+		catch(IOException ioe)
+		{
+			System.out.println("Data cannot be converted to the "
+					+ "proper type as shown above.");
+		}
+		
+	}
+	
+}

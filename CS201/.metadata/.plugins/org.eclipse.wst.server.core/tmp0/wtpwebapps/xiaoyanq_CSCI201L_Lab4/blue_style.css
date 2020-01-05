@@ -1,0 +1,45 @@
+body
+{
+	background-color: #ccf2ff;
+	margin: 0px;
+}
+
+h1{
+	margin: 0px;
+	font-size: 3em;
+	font-weight: normal;
+}
+
+#header{
+	background-image: url("water.jpg");
+	height: 500px;
+	line-height: 500px;			
+	text-align: center;
+	color: #FFF;
+	text-shadow: 3px 3px 3px #0086b3;
+	background-size: cover;
+	background-position: center;	
+}
+
+.wrapperDiv{
+	width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	padding: 30px;
+	border: 2px dashed #0086b3;
+}
+
+img{
+	border-radius: 15px 50px;
+}
+
+#footer
+{
+	text-align: center;
+	background-color: #0086b3;
+	color: #FFF;
+	height: 40px;
+	line-height: 40px;
+	/*font-size: 0.8em;*/
+}

@@ -1,0 +1,17 @@
+INDEX VERSION 1.4+/Users/chelseaqiao/Desktop/CS201/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1263351001.index
+3527697763.index
+383712298.index
+3060467018.index
+905726052.index
+3119617611.index
+801827617.index
+1362071594.index
+3927879410.index
+4190854829.index
+1244032342.index
+1720490110.index
+1011483727.index
+3179133441.index
+3538702758.index
+640196796.index

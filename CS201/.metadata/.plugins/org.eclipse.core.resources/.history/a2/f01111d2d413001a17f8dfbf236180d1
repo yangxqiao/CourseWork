@@ -1,0 +1,7 @@
+#columnchart_values{
+	width:600px;
+	height: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+}	

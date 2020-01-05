@@ -1,0 +1,14 @@
+127.0.0.1 - - [02/Oct/2019:19:27:39 -0700] "GET / HTTP/1.1" 200 11330
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:27:41 -0700] "GET /xiaoyanq_CSCI201L_Lab6/invalidAnswer.jsp HTTP/1.1" 200 914
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:27:46 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet.jsp?fname=Define&lname= HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:29:05 -0700] "GET /xiaoyanq_CSCI201L_Lab6/invalidAnswer.jsp HTTP/1.1" 200 915
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:29:09 -0700] "GET /my_servlet.jsp?fname=Xwdwe&lname= HTTP/1.1" 404 1088
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:30:05 -0700] "GET /xiaoyanq_CSCI201L_Lab6/invalidAnswer.jsp HTTP/1.1" 200 919
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:30:09 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet.java?fname=Xioad&lname= HTTP/1.1" 404 1116
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:30:55 -0700] "GET /xiaoyanq_CSCI201L_Lab6/invalidAnswer.jsp HTTP/1.1" 200 914
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:30:58 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet?fname=Cfrerq&lname= HTTP/1.1" 200 68
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:31:33 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet?fname=Xiaoyang&lname=Qiao HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:31:33 -0700] "GET /xiaoyanq_CSCI201L_Lab6/validAnswer.jsp?fname=Xiaoyang&lname=Qiao&email=&submit=Submit HTTP/1.1" 200 334
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:50:22 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet?fname=Xiaoyang&lname=Qiao HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:50:22 -0700] "GET /xiaoyanq_CSCI201L_Lab6/validAnswer.jsp?fname=Xiaoyang&lname=Qiao&email=&submit=Submit HTTP/1.1" 200 335
+0:0:0:0:0:0:0:1 - - [02/Oct/2019:19:50:30 -0700] "GET /xiaoyanq_CSCI201L_Lab6/my_servlet?fname=Xiaoyang&lname= HTTP/1.1" 200 33

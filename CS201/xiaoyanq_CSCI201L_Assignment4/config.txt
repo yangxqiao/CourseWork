@@ -1,0 +1,6 @@
+ServerHostname=localhost
+ServerPort=6778
+DBConnection=jdbc:mysql://google/Lab7?cloudSqlInstance=csci201-lab7-255501:us-central1:sql-csci201&socketFactory=com.google.cloud.sql.mysql.SocketFactory&useSSL=false&user=test&password=password
+DBUsername=test
+DBPassword=password
+SecretWordFile=hangmanwords.txt

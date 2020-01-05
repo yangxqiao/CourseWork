@@ -1,0 +1,49 @@
+#search-button{
+	margin-left: 10px;
+	height: 30px;
+	width: 70px;
+	color: #FFF;
+	font-size: 13px;
+	border-radius: 5px;
+	background-color: #D56AA0;
+}
+
+#input{
+	margin-left: 10px;
+	height: 25px;
+	width: 400px;
+	font-size: 13px;
+	border-radius: 5px;
+}
+
+.radio{
+	margin-right: 15px;
+}
+
+#left-button{
+	float: right;
+	line-height: 100px;
+	color: #FFC7D4;
+	margin-right: 50px;
+}
+
+#right-button{
+	float: right;
+	line-height: 100px;
+	color: #FFC7D4;
+	margin-right: 10%;
+}
+
+#main{
+	width: 100%;
+	margin-right:0;		
+}
+
+#submit{
+	height: 30px;
+	font-size: 18px;
+	margin-top: 40px;
+	color: white;
+	border-radius: 5px;
+	background-color: #D56AA0;
+}

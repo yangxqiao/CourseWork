@@ -1,0 +1,46 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Contacts_Book {
+
+	public static void main(String [] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.print("What is the name of the contacts file?");
+		String filename = input.nextLine();
+//		System.out.println(filename);
+		FileReader fr;
+		BufferedReader br;
+		boolean canReadFile = false;
+		while(!canReadFile)
+		{
+			try {
+				fr = new FileReader(filename);
+				canReadFile = true;
+				System.out.println("Successfully print the line.");
+				br = new BufferedReader(fr);
+				String line = br.readLine();
+				while(line != null)
+				{
+					System.out.println(line);
+					line = br.readLine();
+				}
+			}
+			catch(FileNotFoundException fnfe){
+				System.out.println("The file " + filename + " could not be found.");
+				System.out.print("What is the name of the contacts file?");
+				filename = input.nextLine();
+			}
+			catch(IOException ioe)
+			{
+				System.out.println(ioe.getMessage());
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [18/Sep/2019:11:35:45 -0700] "GET / HTTP/1.1" 200 11330
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:11:35:46 -0700] "GET /xiaoyanq_CSCI201L_Lab4/unstyled.html HTTP/1.1" 200 2208
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:11:35:46 -0700] "GET /d2l/common/math/MathML.js?v=20.19.8.17540-44 HTTP/1.1" 404 1111
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:41 -0700] "GET /xiaoyanq_CSCI201L_Lab4/unstyled.html HTTP/1.1" 200 2443
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:41 -0700] "GET /d2l/common/math/MathML.js?v=20.19.8.17540-44 HTTP/1.1" 404 1111
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:42 -0700] "GET /xiaoyanq_CSCI201L_Lab4/blue_style.html HTTP/1.1" 200 2989
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:42 -0700] "GET /xiaoyanq_CSCI201L_Lab4/blue_style.css HTTP/1.1" 200 638
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:42 -0700] "GET /d2l/common/math/MathML.js?v=20.19.8.17540-44 HTTP/1.1" 404 1111
+0:0:0:0:0:0:0:1 - - [18/Sep/2019:18:29:43 -0700] "GET /xiaoyanq_CSCI201L_Lab4/water.jpg HTTP/1.1" 404 1110

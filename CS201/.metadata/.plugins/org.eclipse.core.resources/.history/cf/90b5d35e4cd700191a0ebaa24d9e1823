@@ -1,0 +1,65 @@
+package xiaoyanq_CSCI201L_Assignment1;
+
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Contacts_Book {
+	private String _firstname;
+	private String _lastname;
+	private String _emailAdress;
+	private int _age;
+	private boolean _nearCampus;
+	private String _notes;
+	
+	public Contacts_Book(String firstname, String lastname, String emailAdress, 
+			int age, boolean nearCampus, String notes)
+	{
+		this._firstname = firstname;
+		this._lastname = lastname;
+		this._emailAdress = emailAdress;
+		this._age = age;
+		this._nearCampus = nearCampus;
+		this._notes = notes;		
+	}
+	
+	// static String equalsIgnoreCase(String another)
+	public static void main(String [] args)
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("What is the name of the contacts file?");
+		String filename = in.nextLine();
+		FileReader fr;
+		BufferedReader br;
+		try {
+			fr = new FileReader(filename);
+			br = new BufferedReader(fr);
+			String line = br.readLine();
+			while(line != null)
+			{
+				String[] parse_arr = line.split(",");
+				if(parse_arr.length < 6)
+				{
+					throw new IOException("Too few parameters on one of the lines.");
+				}
+				for(int i = 0; i < parse_arr[1].length(); ++i)
+				{
+					
+				}
+				
+			}
+		}
+		catch(FileNotFoundException fnfe){
+			System.out.println("File not found.");
+		}
+		catch(IOException ioe)
+		{
+			System.out.println("Data cannot be converted to the "
+					+ "proper type as shown above.");
+		}
+		
+	}
+	
+}

@@ -1,0 +1,473 @@
+package gameRoom;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.Properties;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.Vector;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+import jnr.ffi.Struct.int16_t;
+import jnr.ffi.Struct.socklen_t;
+
+public class Server {
+	
+	private static String ServerHostname = "";
+	private static String ServerPort = "";
+	private static String DBConnection = "";
+	private static String DBUsername = "";
+	private static String DBPassword = "";
+	private static String SecretWordFile = "";
+	private Vector<ServerGameThread> serverThreads;
+	private Connection conn = null;
+	private LinkedHashMap<String, Integer> gameNames;
+	private LinkedHashMap<String, GameRoom> allGameRooms;
+	private Vector<String> secretWords;
+	
+	public Server(int port) {
+		String jdbcUrl = DBConnection;
+		gameNames = new LinkedHashMap<String, Integer>();
+		allGameRooms = new LinkedHashMap<String, GameRoom>();
+		secretWords = new Vector<String>();
+		
+		try {
+			System.out.println("Binding to port " + port);
+			ServerSocket ss = new ServerSocket(port);
+			System.out.println("Bound to port " + port);
+		
+			conn = DriverManager.getConnection(jdbcUrl);
+			System.out.println("Trying to connect to database...Connected!");
+			serverThreads = new Vector<ServerGameThread>();
+			
+			readSecretWordFile();
+			
+			while(true) {
+				Socket s = ss.accept(); // blocking
+				System.out.println("Connection from: " + s.getInetAddress());
+				Lock lock = new ReentrantLock();
+				Condition condition = lock.newCondition();
+				ServerGameThread st = new ServerGameThread(s, this, lock, condition);
+				
+				serverThreads.add(st);
+				
+			}
+		} 
+		catch (IOException ioe) {
+			System.out.println("ioe in ChatRoom constructor: " + ioe.getMessage());
+		}
+		catch (SQLException sqle) {
+			System.out.println("Trying to connect to database...Unable to connect to");
+			System.out.println("database " + DBConnection + " with username " + DBUsername + " and password " + DBPassword + ".");
+		} 
+		finally {
+			// Close connections
+			try {
+				if(conn != null)
+				{
+					conn.close();
+				}
+			}
+			catch(SQLException sqle)
+			{
+				System.out.println(sqle.getMessage());
+			}
+		}
+	}
+	
+	public void signalNext(ServerGameThread st, String gameName)
+	{
+		GameRoom myRoom = allGameRooms.get(gameName);
+		Integer indexInteger = myRoom.indexOfPlayer(st)+1;
+		if(indexInteger == myRoom.currPlayer())
+		{
+			indexInteger = 0;
+		}
+		
+		ServerGameThread newThread = myRoom.all_players.elementAt(indexInteger);
+		String message = "Waiting for " + newThread.username + " to do something...";
+		broadcastOtherPlayersOneRoom(myRoom, newThread, message);
+		
+		myRoom.locks.elementAt(indexInteger).lock();
+		myRoom.conditions.elementAt(indexInteger).signal();
+		myRoom.locks.elementAt(indexInteger).unlock();
+	}
+	
+	public void signalNextAndRemovePlayer(ServerGameThread st, String gameName)
+	{
+		GameRoom myRoom = allGameRooms.get(gameName);
+		Integer indexPrev = myRoom.indexOfPlayer(st);
+		Integer indexInteger = myRoom.indexOfPlayer(st)+1;
+		if(indexInteger == myRoom.currPlayer())
+		{
+			indexInteger = 0;
+		}
+		
+		ServerGameThread newThread = myRoom.all_players.elementAt(indexInteger);
+		myRoom.all_players.remove(st);
+		
+		String message = "Waiting for " + newThread.username + " to do something...";
+		broadcastOtherPlayersOneRoom(myRoom, newThread, message);
+		
+		myRoom.locks.elementAt(indexInteger).lock();
+		myRoom.conditions.elementAt(indexInteger).signal();
+		myRoom.locks.elementAt(indexInteger).unlock();
+		
+		myRoom.locks.remove(st.lock);
+		myRoom.conditions.remove(st.condition);
+	}
+	
+	public GameRoom getGameRoom(String name)
+	{
+		return allGameRooms.get(name);
+	}
+	
+	public void removeServerGameThread(ServerGameThread player)
+	{
+		serverThreads.remove(player);
+	}
+	
+	public void removeServerGameThreads(GameRoom myRoom)
+	{
+		Vector<ServerGameThread> allplayers = myRoom.all_players;
+		for(ServerGameThread player : allplayers)
+		{
+			removeServerGameThread(player);
+		}
+	}
+	
+	public void removeRoom(String gameName)
+	{
+		if(allGameRooms.containsKey(gameName))
+		{
+			allGameRooms.remove(gameName);
+		}
+		if(gameNames.containsKey(gameName))
+		{
+			gameNames.remove(gameName);
+		}
+	}
+	
+	public void readSecretWordFile()
+	{
+		FileReader fr2 = null;
+		BufferedReader br2 = null;
+		try {
+			fr2 = new FileReader("hangmanwords.txt");
+			br2 = new BufferedReader(fr2);
+			String line = br2.readLine();
+			while(line != null)
+			{
+				secretWords.add(line);
+				line = br2.readLine();
+			}
+		}
+		catch(FileNotFoundException fnfe){
+			System.out.println("The secretWord file could not be read.");
+		}
+		catch(IOException ioe)
+		{
+			System.out.println("The secretWord file could not be found.");
+		}
+	}
+	
+	public boolean searchUser(String username)
+	{
+		GameData gData = new GameData(conn);
+		return gData.searchUser(username);
+	}
+	
+	public boolean checkUsernamePassword(String username, String password)
+	{
+		GameData gameData = new GameData(conn);
+		return gameData.checkUserPassword(username, password);
+	}
+	
+	public void addUser(String username, String password) {
+		GameData gameData = new GameData(conn);
+		gameData.addUser(username, password);
+	}
+		
+	public Integer getWinNum(String username)
+	{
+		GameData gameData = new GameData(conn);
+		return gameData.getNumWins(username);
+	}
+	
+	public Integer getLoseNum(String username)
+	{
+		GameData gameData = new GameData(conn);
+		return gameData.getNumLoses(username);
+	}
+	
+	public void updateRecord(String username, int winNum, int loseNum)
+	{
+		GameData gameData = new GameData(conn);
+		gameData.updateRecord(username, winNum, loseNum);
+	}
+	
+	// only send messages to the server
+	public void broadcast(String message) {
+		if (message != null) {
+			System.out.println(message);
+		}
+	}
+	
+	// return true when no other user login as this username
+	// otherwise return false
+	public boolean checkNoRepeatLogin(String name) {
+		
+		for(ServerGameThread temp : serverThreads)
+		{
+			if(temp.username.contains(name))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public void broadcastOtherPlayersOneRoom(GameRoom myRoom, ServerGameThread player, String message)
+	{
+		Vector<ServerGameThread> allplayers = myRoom.getAllPlayers();
+		for(ServerGameThread threads : allplayers)
+		{
+			if(threads != player)
+			{
+				threads.sendMessage(message);
+			}
+		}
+	}
+	
+	public void broadcastWhenOnePlayerLose(GameRoom myRoom, ServerGameThread myPlayer)
+	{
+		Vector<ServerGameThread> allplayers = myRoom.getAllPlayers();
+		for(ServerGameThread player : allplayers)
+		{
+			if(player != myPlayer)
+			{
+				player.sendMessage("\n");
+				player.sendMessage(myPlayer.username + "'s Record:");
+				player.sendMessage("--------------");
+				player.sendMessage("Wins - " + getWinNum(myPlayer.username));
+				player.sendMessage("Loses - " + getLoseNum(myPlayer.username));
+				player.sendMessage("\n");
+				
+				myPlayer.sendMessage("\n");
+				myPlayer.sendMessage(player.username + "'s Record:");
+				myPlayer.sendMessage("--------------");
+				myPlayer.sendMessage("Wins - " + getWinNum(player.username));
+				myPlayer.sendMessage("Loses - " + getLoseNum(player.username));
+				myPlayer.sendMessage("\n");
+			}
+		}
+		
+		
+	}
+	
+	public void broadcastNewRecords(GameRoom myRoom)
+	{
+		Vector<ServerGameThread> allplayers = myRoom.getAllPlayers();
+		for(ServerGameThread threads : allplayers)
+		{
+			threads.sendMessage("\n");
+			threads.sendMessage(threads.username + "'s Record:");
+			threads.sendMessage("--------------");
+			threads.sendMessage("Wins - " + getWinNum(threads.username));
+			threads.sendMessage("Loses - " + getLoseNum(threads.username));
+		}
+		
+		for(ServerGameThread currPlayer : allplayers)
+		{
+			for(ServerGameThread player : allplayers)
+			{
+				if(player != currPlayer)
+				{
+					currPlayer.sendMessage("\n");
+					currPlayer.sendMessage(player.username + "'s Record:");
+					currPlayer.sendMessage("--------------");
+					currPlayer.sendMessage("Wins - " + getWinNum(player.username));
+					currPlayer.sendMessage("Loses - " + getLoseNum(player.username));
+				}
+			}
+		}
+	}
+	
+	public void broadcastWhenPlayerJoinGame(GameRoom myRoom, ServerGameThread player) {
+		Vector<ServerGameThread> allplayers = myRoom.getAllPlayers();
+		for(ServerGameThread threads : allplayers)
+		{
+			if(threads != player)
+			{
+				threads.sendMessage("\n");
+				threads.sendMessage("User " + player.username + " is in the game.");
+				threads.sendMessage("\n");
+				threads.sendMessage(player.username + "'s Record:");
+				threads.sendMessage("--------------");
+				threads.sendMessage("Wins - " + getWinNum(player.username));
+				threads.sendMessage("Loses - " + getLoseNum(player.username));
+				
+				threads.sendMessage("\n");
+				player.sendMessage("User " + threads.username + " is in the game.");
+				player.sendMessage("\n");
+				player.sendMessage(threads.username + "'s Record:");
+				player.sendMessage("--------------");
+				player.sendMessage("Wins - " + getWinNum(threads.username));
+				player.sendMessage("Loses - " + getLoseNum(threads.username));
+			}
+		}
+		
+		if(!myRoom.isFull())
+		{
+			Integer diff = myRoom.playerDiff();
+			for(ServerGameThread threads : allplayers)
+			{
+				threads.sendMessage("Waiting for " + String.valueOf(diff) + " other user to join in...");
+			}
+		}
+	}
+	
+	public void broadcastToAllPlayerOneRoom(GameRoom myRoom, String message)
+	{
+		Vector<ServerGameThread> allplayers = myRoom.getAllPlayers();
+		for(ServerGameThread threads : allplayers)
+		{
+			threads.sendMessage(message);	
+		}
+	}
+	
+	public boolean checkGameExist(String name)
+	{
+		return gameNames.containsKey(name);
+	}
+
+	public boolean addPlayertoGame(String gameName, ServerGameThread player) {
+		GameRoom myRoom = allGameRooms.get(gameName);
+		if(!myRoom.is_playing)
+		{
+			boolean isAdd = myRoom.addPlayer(player);
+			if(isAdd)
+			{
+				if(myRoom.isFull())
+				{
+					String empty = "\n";
+					broadcastToAllPlayerOneRoom(myRoom, empty);
+					String name = myRoom.getAllPlayers().lastElement().username;
+					String message1 = name + " - " + gameName + " has " + Integer.toString(myRoom.totalPlayer()) + " so starting the game. Secret word is " + myRoom.getSecretWord();
+					broadcast(message1);
+				}
+			}
+			return isAdd;
+		}
+		return false;
+	}
+	
+	
+	public boolean checkFull(String gameName) {
+		GameRoom myRoom = allGameRooms.get(gameName);
+		return myRoom.isFull();
+	}
+	
+
+	public void addGame(String gameName, Integer numPlayer, ServerGameThread player1) {
+		gameNames.put(gameName, numPlayer);
+		GameRoom newGame = new GameRoom(player1, numPlayer, gameName, secretWords, this);
+		allGameRooms.put(gameName, newGame);
+	}
+	
+	public String getSecretWord(String gameName)
+	{
+		GameRoom myRoom = allGameRooms.get(gameName);
+		return myRoom.getSecretWord();
+	}
+	
+	public static void main(String [] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("What is the name of the configuration file?");
+		String filename = input.nextLine();
+		System.out.println("Reading configuration file...");
+		FileReader fr;
+		String param = "";
+		
+		boolean canReadFile = false;
+		while(!canReadFile)
+		{
+			try {
+				
+				fr = new FileReader(filename);
+				Properties prop = new Properties();
+				prop.load(fr);
+				
+				ServerHostname = prop.getProperty("ServerHostname");
+				ServerPort = prop.getProperty("ServerPort");
+				DBConnection = prop.getProperty("DBConnection");
+				DBUsername = prop.getProperty("DBUsername");
+				DBPassword = prop.getProperty("DBPassword");
+				SecretWordFile = prop.getProperty("SecretWordFile");
+				
+				if(ServerHostname == null)
+				{
+					throw new IOException("ServerHostname is a required parameter in the configuration file.");
+				}
+				if(ServerPort == null)
+				{
+					throw new IOException("ServerPort is a required parameter in the configuration file.");
+				}
+				if(DBConnection == null)
+				{
+					throw new IOException("DBConnection is a required parameter in the configuration file.");
+				}
+				if(DBUsername == null)
+				{
+					throw new IOException("DBUsername is a required parameter in the configuration file.");
+				}
+				if(DBPassword == null)
+				{
+					throw new IOException("DBPassword is a required parameter in the configuration file.");
+				}
+				if(SecretWordFile == null)
+				{
+					throw new IOException("SecretWordFile is a required parameter in the configuration file.");
+				}
+				
+				System.out.println("Server Hostname – " + ServerHostname);
+				System.out.println("Server Port – " + ServerPort);
+				System.out.println("Database Connection String – " + DBConnection);
+				System.out.println("Database Username - " + DBUsername);
+				System.out.println("Database Password - " + DBPassword);
+				System.out.println("Secret Word File - " + SecretWordFile);
+				System.out.println();
+
+				canReadFile = true;
+			}
+			catch(FileNotFoundException fnfe){
+				System.out.println("The file " + filename + " could not be found.");
+				System.out.println("What is the name of the configuration file?");
+				filename = input.nextLine();
+			}
+			catch(IOException ioe)
+			{
+				System.out.println(ioe.getMessage());
+				System.out.println("What is the name of the configuration file?");
+				filename = input.nextLine();
+			}
+		}
+		
+		int port = Integer.parseInt(ServerPort);
+		input.close();
+		Server sr = new Server(port);
+	}
+
+}
