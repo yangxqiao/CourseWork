@@ -1,0 +1,7 @@
+[PASS] [VPASS] sum_pairs.BadInput1 (0.898)
+[PASS] [VPASS] sum_pairs.NominalInput1 (0.742)
+[PASS] [VPASS] sum_pairs.NominalInput2 (0.756)
+[PASS] [VPASS] sum_pairs.NominalInput3 (1.012)
+[PASS] [VPASS] sum_pairs.EvenSum1 (0.711)
+[PASS] [VPASS] sum_pairs.SingleSum (0.746)
+[FAIL] [VPASS] sum_pairs.ZeroInput (0.706)

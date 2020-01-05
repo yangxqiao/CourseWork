@@ -1,0 +1,4 @@
+Scanning dependencies of target hw1_sum_pairs
+[ 50%] Building CXX object sum_pairs_tests/CMakeFiles/hw1_sum_pairs.dir/home/cs104/CS_104/hw-xiaoyanq/hw1/sum_pairs.cpp.o
+[100%] Linking CXX executable hw1_sum_pairs
+[100%] Built target hw1_sum_pairs

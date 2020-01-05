@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhw1_str.a  CMakeFiles/hw1_str.dir/home/cs104/CS_104/hw-xiaoyanq/hw1/str.cpp.o
+/usr/bin/ranlib libhw1_str.a

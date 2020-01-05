@@ -1,0 +1,135 @@
+
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.BadInput1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.BadInput1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.BadInput1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/stdout.txt
+[       OK ] sum_pairs.BadInput1 (887 ms)
+[----------] 1 test from sum_pairs (887 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (887 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.NominalInput1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/stdout.txt
+[       OK ] sum_pairs.NominalInput1 (739 ms)
+[----------] 1 test from sum_pairs (739 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (739 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.NominalInput2:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/stdout.txt
+[       OK ] sum_pairs.NominalInput2 (753 ms)
+[----------] 1 test from sum_pairs (754 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (754 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.NominalInput3:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/stdout.txt
+[       OK ] sum_pairs.NominalInput3 (1010 ms)
+[----------] 1 test from sum_pairs (1010 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (1010 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.EvenSum1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.EvenSum1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.EvenSum1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/stdout.txt
+[       OK ] sum_pairs.EvenSum1 (708 ms)
+[----------] 1 test from sum_pairs (708 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (709 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.SingleSum:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.SingleSum
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.SingleSum
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/stdout.txt
+[       OK ] sum_pairs.SingleSum (743 ms)
+[----------] 1 test from sum_pairs (743 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (743 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST sum_pairs.ZeroInput:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.ZeroInput
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.ZeroInput
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/stdout.txt
+/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_tests.cpp:170: Failure
+Value of: checkSums("ZeroInput", zero, true, true)
+  Actual: false (Incorrect number of sums in output file)
+Expected: true
+[  FAILED  ] sum_pairs.ZeroInput (704 ms)
+[----------] 1 test from sum_pairs (704 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (704 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] sum_pairs.ZeroInput
+
+ 1 FAILED TEST

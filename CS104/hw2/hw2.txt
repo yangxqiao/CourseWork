@@ -1,0 +1,71 @@
+HW2
+
+Problem 1
+	part(a)
+		README.md: unmodified
+	
+	part(b)
+		README.md: modified
+		fun_problem.txt: untracked
+	
+	part(c)
+		README.md: staged
+		fun_problem.txt: staged
+	
+	part(d)
+		README.md: modified
+		fun_problem.txt: modified
+	
+	part(e)
+		README.md: staged
+		fun_problem.txt: unmodified
+		There is no content in the fun_problem.txt 
+		because git --checkout discard changes made on the fun_problem.txt
+	
+	part(f)
+		README.md: modified
+		README.md is modified because a new line is appended to the end of README.md
+
+Problem 2
+	part(a)
+		1. TAB
+	
+	part(b)
+		1. make clean will call 
+			-->	rm -f ./shape1.o ./shape2.o ./shape.o *~ shape1 shape2 ./*~
+		   this command will remove shape1 and shape2 these two executable files
+		
+		2. make shape1 will call
+		   --> g++ -o shape1 shape1.o shape.o -I../lib -std=c++11 -ggdb -lm
+		   this command will generate the executable file for shape1 by using shape1.o and shape.o
+	
+	part(c)
+		The purpose of a .PHONY rule is to tell the compiler the specific targets follow .PHONY are not associated with a file
+	
+	part(d)
+		2. Makefile
+		4. makefile
+
+Pronlem 3
+    1. A list of colleges that won the NCAA basketball championship each year (string).
+    Because the colleges need to be stored in the order they won, 
+    the preferred data should be the list which is an ordered collection of items and may contain duplicate values.
+    
+    2. A set whose keys are the social security numbers of those who have registered to vote(int). 
+    In this case, only the social security number is required to be saved. 
+    A set is a dictionary we only store keys, each of which should be unique. 
+    Besides, we can call find(key) function on a set to easily check whether a key has been stored or not.
+
+    3. A dictionary whose keys are the contacts (string) and the value of is a list of phone numbers of the contact (a list of strings). 
+    Since each contact can have multiple phone numbers, so a dictionary is preferred in this situation. 
+    Besides, if we want to access the phone number of one of the contact, the find(key) function can be used. 
+
+    4. A dictionary whose keys are the two-letter state abbreviations (string) and the value of it is a set (set<int>) whose keys are the zip codes of that state (int).
+    Each state has a unique two-letter abbreviation so a dictionary is preferred. 
+    In order to easily check whether a zip code really do exist in a given state, the value of the dictionary should be set of zip codes. 
+    In this way, the find() function can help us to check whether a zip code exists or not.
+
+    5. A list of lists of every student's donut choices for the dozen donuts (a list of lists of string). 
+    Since each student will order a dozen of donuts and the donut favor could be duplicated, we need a list to store each student's choice of the donuts. 
+    To store all the students' choice of donuts, another list is needed. 
+

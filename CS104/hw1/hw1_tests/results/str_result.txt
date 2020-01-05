@@ -1,0 +1,27 @@
+Test StrTestConstructorTests.DefaultConstructor passed
+Test StrTestConstructorTests.CharArrayConstructor passed
+Test StrTestConstructorTests.NullInputConstructor passed
+Test StrTestConstructorTests.StrConstructor passed
+Test StrTestOpAssign.AssignStr passed
+Test StrTestOpAssign.AssignSelf passed
+Test StrTestOpAssign.NullData passed
+Test StrTestOpAssign.AssignCharArrayToNull passed
+Test StrTestOpAssign.AssignCharArray passed
+Test StrTestOpPlus.AddTwoStrings1 passed
+Test StrTestOpPlus.AddSelf passed
+Test StrTestOpPlus.AddCharArray passed
+Test StrTestRelationalOps.Equals passed
+Test StrTestRelationalOps.Neq passed
+Test StrTestRelationalOps.LessThanGreaterThan passed
+Test StrTestPlusEq.PlusEqStr passed
+Test StrTestPlusEq.PlusEqCharArray passed
+Test StrTestPlusEq.PlusEqSelf passed
+Test StrTestSize.ConstructorSizes passed
+Test StrTestSize.AdditionSizes passed
+Test StrTestSize.SizeTracking passed
+Test StrTestIndexing.NormalIndex passed
+Test StrTestIndexing.IndexOutOfRange passed
+Test StrTestIOStream.PrintTest passed
+Test StrRuntime.Concatenate passed
+
+All Test Cases Passed

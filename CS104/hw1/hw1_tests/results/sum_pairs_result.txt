@@ -1,0 +1,10 @@
+Test sum_pairs.BadInput1 passed
+Test sum_pairs.NominalInput1 passed
+Test sum_pairs.NominalInput2 passed
+Test sum_pairs.NominalInput3 passed
+Test sum_pairs.EvenSum1 passed
+Test sum_pairs.SingleSum passed
+Test sum_pairs.ZeroInput failed
+
+Failed 1 tests:
+	Test sum_pairs.ZeroInput

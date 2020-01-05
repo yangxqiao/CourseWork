@@ -1,0 +1,235 @@
+
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.EasyTweetNum:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetNum
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetNum
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/stdout.txt
+[       OK ] TestTweetParse.EasyTweetNum (723 ms)
+[----------] 1 test from TestTweetParse (723 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (723 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.NumTweets1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/stdout.txt
+[       OK ] TestTweetParse.NumTweets1 (704 ms)
+[----------] 1 test from TestTweetParse (704 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (704 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.NumTweets2:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/stdout.txt
+[       OK ] TestTweetParse.NumTweets2 (730 ms)
+[----------] 1 test from TestTweetParse (730 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (730 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.NumTweets3:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/stdout.txt
+[       OK ] TestTweetParse.NumTweets3 (766 ms)
+[----------] 1 test from TestTweetParse (766 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (766 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.EasyTweetUsers:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetUsers
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetUsers
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/stdout.txt
+[       OK ] TestTweetParse.EasyTweetUsers (994 ms)
+[----------] 1 test from TestTweetParse (994 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (994 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestUsers1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/stdout.txt
+[       OK ] TestTweetParse.TestUsers1 (877 ms)
+[----------] 1 test from TestTweetParse (877 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (877 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestUsers2:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/stdout.txt
+[       OK ] TestTweetParse.TestUsers2 (733 ms)
+[----------] 1 test from TestTweetParse (733 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (733 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestUsers3:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/stdout.txt
+[       OK ] TestTweetParse.TestUsers3 (724 ms)
+[----------] 1 test from TestTweetParse (724 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (724 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.EasyTweetHashtags:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetHashtags
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetHashtags
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.EasyTweetHashtags (731 ms)
+[----------] 1 test from TestTweetParse (731 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (731 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestHashtags1:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.TestHashtags1 (751 ms)
+[----------] 1 test from TestTweetParse (751 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (751 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestHashtags2:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.TestHashtags2 (747 ms)
+[----------] 1 test from TestTweetParse (747 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (747 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.TestHashtags3:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/stdout.txt
+[       OK ] TestTweetParse.TestHashtags3 (1039 ms)
+[----------] 1 test from TestTweetParse (1039 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (1039 ms total)
+[  PASSED  ] 1 test.
+------------------------------------------------------------------------------
+OUTPUT OF TEST TestTweetParse.BadInput:
+------------------------------------------------------------------------------
+Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.BadInput
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.BadInput
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/stdout.txt
+[       OK ] TestTweetParse.BadInput (747 ms)
+[----------] 1 test from TestTweetParse (747 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (747 ms total)
+[  PASSED  ] 1 test.

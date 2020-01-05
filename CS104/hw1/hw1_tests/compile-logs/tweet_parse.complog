@@ -1,0 +1,4 @@
+Scanning dependencies of target hw1_tweet_parse
+[ 50%] Building CXX object tweet_parse_tests/CMakeFiles/hw1_tweet_parse.dir/home/cs104/CS_104/hw-xiaoyanq/hw1/tweet_parse.cpp.o
+[100%] Linking CXX executable hw1_tweet_parse
+[100%] Built target hw1_tweet_parse

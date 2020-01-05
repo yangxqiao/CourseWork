@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -g3 -O0   CMakeFiles/hw1_tweet_parse.dir/home/cs104/CS_104/hw-xiaoyanq/hw1/tweet_parse.cpp.o  -o hw1_tweet_parse 

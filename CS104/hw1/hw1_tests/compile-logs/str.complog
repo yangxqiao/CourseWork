@@ -1,0 +1,4 @@
+Scanning dependencies of target hw1_str
+[ 50%] Building CXX object str_tests/CMakeFiles/hw1_str.dir/home/cs104/CS_104/hw-xiaoyanq/hw1/str.cpp.o
+[100%] Linking CXX static library libhw1_str.a
+[100%] Built target hw1_str

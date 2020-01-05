@@ -1,0 +1,2043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20190605-0301-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.5.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="studentVM"
+	OSRelease="4.4.0-104-generic"
+	OSVersion="#127-Ubuntu SMP Mon Dec 11 12:16:42 UTC 2017"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="78"
+	ProcessorCacheSize="4096"
+	NumberOfLogicalCPU="2"
+	NumberOfPhysicalCPU="1"
+	TotalVirtualMemory="2045"
+	TotalPhysicalMemory="2000"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="1200"
+	>
+	<Testing>
+		<StartDateTime>Jun 04 20:01 PDT</StartDateTime>
+		<StartTestTime>1559703675</StartTestTime>
+		<TestList>
+			<Test>./sum_pairs_tests/sum_pairs.BadInput1</Test>
+			<Test>./sum_pairs_tests/sum_pairs.NominalInput1</Test>
+			<Test>./sum_pairs_tests/sum_pairs.NominalInput2</Test>
+			<Test>./sum_pairs_tests/sum_pairs.NominalInput3</Test>
+			<Test>./sum_pairs_tests/sum_pairs.EvenSum1</Test>
+			<Test>./sum_pairs_tests/sum_pairs.SingleSum</Test>
+			<Test>./sum_pairs_tests/sum_pairs.ZeroInput</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.EasyTweetNum</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.NumTweets1</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.NumTweets2</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.NumTweets3</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.EasyTweetUsers</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestUsers1</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestUsers2</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestUsers3</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.EasyTweetHashtags</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestHashtags1</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestHashtags2</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.TestHashtags3</Test>
+			<Test>./tweet_parse_tests/TestTweetParse.BadInput</Test>
+			<Test>./str_tests/StrTestConstructorTests.DefaultConstructor</Test>
+			<Test>./str_tests/StrTestConstructorTests.CharArrayConstructor</Test>
+			<Test>./str_tests/StrTestConstructorTests.NullInputConstructor</Test>
+			<Test>./str_tests/StrTestConstructorTests.StrConstructor</Test>
+			<Test>./str_tests/StrTestOpAssign.AssignStr</Test>
+			<Test>./str_tests/StrTestOpAssign.AssignSelf</Test>
+			<Test>./str_tests/StrTestOpAssign.NullData</Test>
+			<Test>./str_tests/StrTestOpAssign.AssignCharArrayToNull</Test>
+			<Test>./str_tests/StrTestOpAssign.AssignCharArray</Test>
+			<Test>./str_tests/StrTestOpPlus.AddTwoStrings1</Test>
+			<Test>./str_tests/StrTestOpPlus.AddSelf</Test>
+			<Test>./str_tests/StrTestOpPlus.AddCharArray</Test>
+			<Test>./str_tests/StrTestRelationalOps.Equals</Test>
+			<Test>./str_tests/StrTestRelationalOps.Neq</Test>
+			<Test>./str_tests/StrTestRelationalOps.LessThanGreaterThan</Test>
+			<Test>./str_tests/StrTestPlusEq.PlusEqStr</Test>
+			<Test>./str_tests/StrTestPlusEq.PlusEqCharArray</Test>
+			<Test>./str_tests/StrTestPlusEq.PlusEqSelf</Test>
+			<Test>./str_tests/StrTestSize.ConstructorSizes</Test>
+			<Test>./str_tests/StrTestSize.AdditionSizes</Test>
+			<Test>./str_tests/StrTestSize.SizeTracking</Test>
+			<Test>./str_tests/StrTestIndexing.NormalIndex</Test>
+			<Test>./str_tests/StrTestIndexing.IndexOutOfRange</Test>
+			<Test>./str_tests/StrTestIOStream.PrintTest</Test>
+			<Test>./str_tests/StrRuntime.Concatenate</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>sum_pairs.BadInput1</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.BadInput1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.BadInput1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.897963</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.BadInput1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.BadInput1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.BadInput1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/BadInput1/stdout.txt
+[       OK ] sum_pairs.BadInput1 (887 ms)
+[----------] 1 test from sum_pairs (887 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (887 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>sum_pairs.NominalInput1</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.NominalInput1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.742196</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput1/stdout.txt
+[       OK ] sum_pairs.NominalInput1 (739 ms)
+[----------] 1 test from sum_pairs (739 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (739 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>sum_pairs.NominalInput2</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.NominalInput2</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput2"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.756198</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput2"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput2/stdout.txt
+[       OK ] sum_pairs.NominalInput2 (753 ms)
+[----------] 1 test from sum_pairs (754 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (754 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>sum_pairs.NominalInput3</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.NominalInput3</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput3"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.01234</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.NominalInput3"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.NominalInput3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.NominalInput3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/NominalInput3/stdout.txt
+[       OK ] sum_pairs.NominalInput3 (1010 ms)
+[----------] 1 test from sum_pairs (1010 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (1010 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>sum_pairs.EvenSum1</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.EvenSum1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.EvenSum1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.710856</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.EvenSum1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.EvenSum1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.EvenSum1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/evenSum1/stdout.txt
+[       OK ] sum_pairs.EvenSum1 (708 ms)
+[----------] 1 test from sum_pairs (708 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (709 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>sum_pairs.SingleSum</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.SingleSum</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.SingleSum"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.745846</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.SingleSum"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.SingleSum
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.SingleSum
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/singleSum/stdout.txt
+[       OK ] sum_pairs.SingleSum (743 ms)
+[----------] 1 test from sum_pairs (743 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (743 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="failed">
+			<Name>sum_pairs.ZeroInput</Name>
+			<Path>./sum_pairs_tests</Path>
+			<FullName>./sum_pairs_tests/sum_pairs.ZeroInput</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.ZeroInput"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.705971</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_pairs_tests "--gtest_filter=sum_pairs.ZeroInput"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = sum_pairs.ZeroInput
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from sum_pairs
+[ RUN      ] sum_pairs.ZeroInput
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/hw1_sum_pairs /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/testFiles/ZeroInput/stdout.txt
+/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/sum_pairs_tests/sum_tests.cpp:170: Failure
+Value of: checkSums("ZeroInput", zero, true, true)
+  Actual: false (Incorrect number of sums in output file)
+Expected: true
+[  FAILED  ] sum_pairs.ZeroInput (704 ms)
+[----------] 1 test from sum_pairs (704 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (704 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] sum_pairs.ZeroInput
+
+ 1 FAILED TEST
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.EasyTweetNum</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.EasyTweetNum</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetNum"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.725879</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetNum"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetNum
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetNum
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/stdout.txt
+[       OK ] TestTweetParse.EasyTweetNum (723 ms)
+[----------] 1 test from TestTweetParse (723 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (723 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.NumTweets1</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.NumTweets1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.706007</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NormalInput1/stdout.txt
+[       OK ] TestTweetParse.NumTweets1 (704 ms)
+[----------] 1 test from TestTweetParse (704 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (704 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.NumTweets2</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.NumTweets2</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets2"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.732992</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets2"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets2/stdout.txt
+[       OK ] TestTweetParse.NumTweets2 (730 ms)
+[----------] 1 test from TestTweetParse (730 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (730 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.NumTweets3</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.NumTweets3</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets3"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.768909</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.NumTweets3"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.NumTweets3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.NumTweets3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/NumTweets3/stdout.txt
+[       OK ] TestTweetParse.NumTweets3 (766 ms)
+[----------] 1 test from TestTweetParse (766 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (766 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.EasyTweetUsers</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.EasyTweetUsers</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetUsers"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.997169</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetUsers"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetUsers
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetUsers
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/EasyTweetUsers/stdout.txt
+[       OK ] TestTweetParse.EasyTweetUsers (994 ms)
+[----------] 1 test from TestTweetParse (994 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (994 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestUsers1</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestUsers1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.88036</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers1/stdout.txt
+[       OK ] TestTweetParse.TestUsers1 (877 ms)
+[----------] 1 test from TestTweetParse (877 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (877 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestUsers2</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestUsers2</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers2"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.735705</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers2"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers2/stdout.txt
+[       OK ] TestTweetParse.TestUsers2 (733 ms)
+[----------] 1 test from TestTweetParse (733 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (733 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestUsers3</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestUsers3</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers3"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.727268</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestUsers3"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestUsers3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestUsers3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestUsers3/stdout.txt
+[       OK ] TestTweetParse.TestUsers3 (724 ms)
+[----------] 1 test from TestTweetParse (724 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (724 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.EasyTweetHashtags</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.EasyTweetHashtags</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetHashtags"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.734672</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.EasyTweetHashtags"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.EasyTweetHashtags
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.EasyTweetHashtags
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.EasyTweetHashtags (731 ms)
+[----------] 1 test from TestTweetParse (731 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (731 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestHashtags1</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestHashtags1</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.75455</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags1
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.TestHashtags1 (751 ms)
+[----------] 1 test from TestTweetParse (751 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (751 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestHashtags2</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestHashtags2</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags2"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.749031</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags2"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags2
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags2
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags1/stdout.txt
+[       OK ] TestTweetParse.TestHashtags2 (747 ms)
+[----------] 1 test from TestTweetParse (747 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (747 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.TestHashtags3</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.TestHashtags3</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags3"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.04182</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.TestHashtags3"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.TestHashtags3
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.TestHashtags3
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/testFiles/TestHashtags3/stdout.txt
+[       OK ] TestTweetParse.TestHashtags3 (1039 ms)
+[----------] 1 test from TestTweetParse (1039 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (1039 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>TestTweetParse.BadInput</Name>
+			<Path>./tweet_parse_tests</Path>
+			<FullName>./tweet_parse_tests/TestTweetParse.BadInput</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.BadInput"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.752402</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/tweet_parse_tests "--gtest_filter=TestTweetParse.BadInput"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = TestTweetParse.BadInput
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from TestTweetParse
+[ RUN      ] TestTweetParse.BadInput
+This test is executing your program with the following command line: 
+/usr/bin/valgrind --tool=memcheck -q --leak-check=yes --error-exitcode=113 /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse_tests/hw1_tweet_parse /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/input.txt /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/output.txt
+Your program's STDOUT was written to: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/tweet_parse/testFiles/BadInput/stdout.txt
+[       OK ] TestTweetParse.BadInput (747 ms)
+[----------] 1 test from TestTweetParse (747 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (747 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestConstructorTests.DefaultConstructor</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestConstructorTests.DefaultConstructor</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.DefaultConstructor"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.871796</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.DefaultConstructor"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4399== Memcheck, a memory error detector
+==4399== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4399== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4399== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestConstructorTests.DefaultConstructor
+==4399== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestConstructorTests.DefaultConstructor
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestConstructorTests
+[ RUN      ] StrTestConstructorTests.DefaultConstructor
+[       OK ] StrTestConstructorTests.DefaultConstructor (8 ms)
+[----------] 1 test from StrTestConstructorTests (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (45 ms total)
+[  PASSED  ] 1 test.
+==4399== 
+==4399== HEAP SUMMARY:
+==4399==     in use at exit: 72,704 bytes in 1 blocks
+==4399==   total heap usage: 424 allocs, 423 frees, 132,595 bytes allocated
+==4399== 
+==4399== LEAK SUMMARY:
+==4399==    definitely lost: 0 bytes in 0 blocks
+==4399==    indirectly lost: 0 bytes in 0 blocks
+==4399==      possibly lost: 0 bytes in 0 blocks
+==4399==    still reachable: 0 bytes in 0 blocks
+==4399==         suppressed: 72,704 bytes in 1 blocks
+==4399== 
+==4399== For counts of detected and suppressed errors, rerun with: -v
+==4399== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestConstructorTests.CharArrayConstructor</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestConstructorTests.CharArrayConstructor</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.CharArrayConstructor"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.888195</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.CharArrayConstructor"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4400== Memcheck, a memory error detector
+==4400== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4400== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4400== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestConstructorTests.CharArrayConstructor
+==4400== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestConstructorTests.CharArrayConstructor
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestConstructorTests
+[ RUN      ] StrTestConstructorTests.CharArrayConstructor
+[       OK ] StrTestConstructorTests.CharArrayConstructor (11 ms)
+[----------] 1 test from StrTestConstructorTests (19 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (49 ms total)
+[  PASSED  ] 1 test.
+==4400== 
+==4400== HEAP SUMMARY:
+==4400==     in use at exit: 72,704 bytes in 1 blocks
+==4400==   total heap usage: 424 allocs, 423 frees, 132,658 bytes allocated
+==4400== 
+==4400== LEAK SUMMARY:
+==4400==    definitely lost: 0 bytes in 0 blocks
+==4400==    indirectly lost: 0 bytes in 0 blocks
+==4400==      possibly lost: 0 bytes in 0 blocks
+==4400==    still reachable: 0 bytes in 0 blocks
+==4400==         suppressed: 72,704 bytes in 1 blocks
+==4400== 
+==4400== For counts of detected and suppressed errors, rerun with: -v
+==4400== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestConstructorTests.NullInputConstructor</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestConstructorTests.NullInputConstructor</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.NullInputConstructor"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.912588</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.NullInputConstructor"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4401== Memcheck, a memory error detector
+==4401== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4401== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4401== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestConstructorTests.NullInputConstructor
+==4401== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestConstructorTests.NullInputConstructor
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestConstructorTests
+[ RUN      ] StrTestConstructorTests.NullInputConstructor
+[       OK ] StrTestConstructorTests.NullInputConstructor (6 ms)
+[----------] 1 test from StrTestConstructorTests (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (42 ms total)
+[  PASSED  ] 1 test.
+==4401== 
+==4401== HEAP SUMMARY:
+==4401==     in use at exit: 72,704 bytes in 1 blocks
+==4401==   total heap usage: 424 allocs, 423 frees, 132,655 bytes allocated
+==4401== 
+==4401== LEAK SUMMARY:
+==4401==    definitely lost: 0 bytes in 0 blocks
+==4401==    indirectly lost: 0 bytes in 0 blocks
+==4401==      possibly lost: 0 bytes in 0 blocks
+==4401==    still reachable: 0 bytes in 0 blocks
+==4401==         suppressed: 72,704 bytes in 1 blocks
+==4401== 
+==4401== For counts of detected and suppressed errors, rerun with: -v
+==4401== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestConstructorTests.StrConstructor</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestConstructorTests.StrConstructor</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.StrConstructor"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.895707</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestConstructorTests.StrConstructor"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4402== Memcheck, a memory error detector
+==4402== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4402== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4402== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestConstructorTests.StrConstructor
+==4402== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestConstructorTests.StrConstructor
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestConstructorTests
+[ RUN      ] StrTestConstructorTests.StrConstructor
+[       OK ] StrTestConstructorTests.StrConstructor (11 ms)
+[----------] 1 test from StrTestConstructorTests (18 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (50 ms total)
+[  PASSED  ] 1 test.
+==4402== 
+==4402== HEAP SUMMARY:
+==4402==     in use at exit: 72,704 bytes in 1 blocks
+==4402==   total heap usage: 426 allocs, 425 frees, 132,489 bytes allocated
+==4402== 
+==4402== LEAK SUMMARY:
+==4402==    definitely lost: 0 bytes in 0 blocks
+==4402==    indirectly lost: 0 bytes in 0 blocks
+==4402==      possibly lost: 0 bytes in 0 blocks
+==4402==    still reachable: 0 bytes in 0 blocks
+==4402==         suppressed: 72,704 bytes in 1 blocks
+==4402== 
+==4402== For counts of detected and suppressed errors, rerun with: -v
+==4402== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpAssign.AssignStr</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpAssign.AssignStr</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignStr"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.887692</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignStr"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4403== Memcheck, a memory error detector
+==4403== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4403== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4403== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpAssign.AssignStr
+==4403== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpAssign.AssignStr
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpAssign
+[ RUN      ] StrTestOpAssign.AssignStr
+[       OK ] StrTestOpAssign.AssignStr (10 ms)
+[----------] 1 test from StrTestOpAssign (17 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (47 ms total)
+[  PASSED  ] 1 test.
+==4403== 
+==4403== HEAP SUMMARY:
+==4403==     in use at exit: 72,704 bytes in 1 blocks
+==4403==   total heap usage: 426 allocs, 425 frees, 132,211 bytes allocated
+==4403== 
+==4403== LEAK SUMMARY:
+==4403==    definitely lost: 0 bytes in 0 blocks
+==4403==    indirectly lost: 0 bytes in 0 blocks
+==4403==      possibly lost: 0 bytes in 0 blocks
+==4403==    still reachable: 0 bytes in 0 blocks
+==4403==         suppressed: 72,704 bytes in 1 blocks
+==4403== 
+==4403== For counts of detected and suppressed errors, rerun with: -v
+==4403== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpAssign.AssignSelf</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpAssign.AssignSelf</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignSelf"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.16569</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignSelf"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4407== Memcheck, a memory error detector
+==4407== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4407== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4407== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpAssign.AssignSelf
+==4407== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpAssign.AssignSelf
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpAssign
+[ RUN      ] StrTestOpAssign.AssignSelf
+[       OK ] StrTestOpAssign.AssignSelf (12 ms)
+[----------] 1 test from StrTestOpAssign (18 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (53 ms total)
+[  PASSED  ] 1 test.
+==4407== 
+==4407== HEAP SUMMARY:
+==4407==     in use at exit: 72,704 bytes in 1 blocks
+==4407==   total heap usage: 424 allocs, 423 frees, 132,210 bytes allocated
+==4407== 
+==4407== LEAK SUMMARY:
+==4407==    definitely lost: 0 bytes in 0 blocks
+==4407==    indirectly lost: 0 bytes in 0 blocks
+==4407==      possibly lost: 0 bytes in 0 blocks
+==4407==    still reachable: 0 bytes in 0 blocks
+==4407==         suppressed: 72,704 bytes in 1 blocks
+==4407== 
+==4407== For counts of detected and suppressed errors, rerun with: -v
+==4407== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpAssign.NullData</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpAssign.NullData</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.NullData"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.927656</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.NullData"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4408== Memcheck, a memory error detector
+==4408== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4408== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4408== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpAssign.NullData
+==4408== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpAssign.NullData
+[==========] Running 0 tests from 0 test cases.
+[==========] 0 tests from 0 test cases ran. (23 ms total)
+[  PASSED  ] 0 tests.
+==4408== 
+==4408== HEAP SUMMARY:
+==4408==     in use at exit: 72,704 bytes in 1 blocks
+==4408==   total heap usage: 411 allocs, 410 frees, 128,205 bytes allocated
+==4408== 
+==4408== LEAK SUMMARY:
+==4408==    definitely lost: 0 bytes in 0 blocks
+==4408==    indirectly lost: 0 bytes in 0 blocks
+==4408==      possibly lost: 0 bytes in 0 blocks
+==4408==    still reachable: 0 bytes in 0 blocks
+==4408==         suppressed: 72,704 bytes in 1 blocks
+==4408== 
+==4408== For counts of detected and suppressed errors, rerun with: -v
+==4408== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpAssign.AssignCharArrayToNull</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpAssign.AssignCharArrayToNull</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignCharArrayToNull"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.828028</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignCharArrayToNull"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4409== Memcheck, a memory error detector
+==4409== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4409== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4409== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpAssign.AssignCharArrayToNull
+==4409== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpAssign.AssignCharArrayToNull
+[==========] Running 0 tests from 0 test cases.
+[==========] 0 tests from 0 test cases ran. (22 ms total)
+[  PASSED  ] 0 tests.
+==4409== 
+==4409== HEAP SUMMARY:
+==4409==     in use at exit: 72,704 bytes in 1 blocks
+==4409==   total heap usage: 411 allocs, 410 frees, 128,450 bytes allocated
+==4409== 
+==4409== LEAK SUMMARY:
+==4409==    definitely lost: 0 bytes in 0 blocks
+==4409==    indirectly lost: 0 bytes in 0 blocks
+==4409==      possibly lost: 0 bytes in 0 blocks
+==4409==    still reachable: 0 bytes in 0 blocks
+==4409==         suppressed: 72,704 bytes in 1 blocks
+==4409== 
+==4409== For counts of detected and suppressed errors, rerun with: -v
+==4409== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpAssign.AssignCharArray</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpAssign.AssignCharArray</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignCharArray"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.905884</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpAssign.AssignCharArray"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4410== Memcheck, a memory error detector
+==4410== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4410== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4410== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpAssign.AssignCharArray
+==4410== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpAssign.AssignCharArray
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpAssign
+[ RUN      ] StrTestOpAssign.AssignCharArray
+[       OK ] StrTestOpAssign.AssignCharArray (13 ms)
+[----------] 1 test from StrTestOpAssign (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (55 ms total)
+[  PASSED  ] 1 test.
+==4410== 
+==4410== HEAP SUMMARY:
+==4410==     in use at exit: 72,704 bytes in 1 blocks
+==4410==   total heap usage: 425 allocs, 424 frees, 132,272 bytes allocated
+==4410== 
+==4410== LEAK SUMMARY:
+==4410==    definitely lost: 0 bytes in 0 blocks
+==4410==    indirectly lost: 0 bytes in 0 blocks
+==4410==      possibly lost: 0 bytes in 0 blocks
+==4410==    still reachable: 0 bytes in 0 blocks
+==4410==         suppressed: 72,704 bytes in 1 blocks
+==4410== 
+==4410== For counts of detected and suppressed errors, rerun with: -v
+==4410== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpPlus.AddTwoStrings1</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpPlus.AddTwoStrings1</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddTwoStrings1"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.890439</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddTwoStrings1"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4411== Memcheck, a memory error detector
+==4411== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4411== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4411== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpPlus.AddTwoStrings1
+==4411== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpPlus.AddTwoStrings1
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpPlus
+[ RUN      ] StrTestOpPlus.AddTwoStrings1
+[       OK ] StrTestOpPlus.AddTwoStrings1 (13 ms)
+[----------] 1 test from StrTestOpPlus (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (50 ms total)
+[  PASSED  ] 1 test.
+==4411== 
+==4411== HEAP SUMMARY:
+==4411==     in use at exit: 72,704 bytes in 1 blocks
+==4411==   total heap usage: 427 allocs, 426 frees, 132,236 bytes allocated
+==4411== 
+==4411== LEAK SUMMARY:
+==4411==    definitely lost: 0 bytes in 0 blocks
+==4411==    indirectly lost: 0 bytes in 0 blocks
+==4411==      possibly lost: 0 bytes in 0 blocks
+==4411==    still reachable: 0 bytes in 0 blocks
+==4411==         suppressed: 72,704 bytes in 1 blocks
+==4411== 
+==4411== For counts of detected and suppressed errors, rerun with: -v
+==4411== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpPlus.AddSelf</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpPlus.AddSelf</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddSelf"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.869766</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddSelf"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4412== Memcheck, a memory error detector
+==4412== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4412== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4412== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpPlus.AddSelf
+==4412== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpPlus.AddSelf
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpPlus
+[ RUN      ] StrTestOpPlus.AddSelf
+[       OK ] StrTestOpPlus.AddSelf (12 ms)
+[----------] 1 test from StrTestOpPlus (18 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (48 ms total)
+[  PASSED  ] 1 test.
+==4412== 
+==4412== HEAP SUMMARY:
+==4412==     in use at exit: 72,704 bytes in 1 blocks
+==4412==   total heap usage: 426 allocs, 425 frees, 132,183 bytes allocated
+==4412== 
+==4412== LEAK SUMMARY:
+==4412==    definitely lost: 0 bytes in 0 blocks
+==4412==    indirectly lost: 0 bytes in 0 blocks
+==4412==      possibly lost: 0 bytes in 0 blocks
+==4412==    still reachable: 0 bytes in 0 blocks
+==4412==         suppressed: 72,704 bytes in 1 blocks
+==4412== 
+==4412== For counts of detected and suppressed errors, rerun with: -v
+==4412== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestOpPlus.AddCharArray</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestOpPlus.AddCharArray</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddCharArray"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.04716</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestOpPlus.AddCharArray"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4413== Memcheck, a memory error detector
+==4413== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4413== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4413== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestOpPlus.AddCharArray
+==4413== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestOpPlus.AddCharArray
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestOpPlus
+[ RUN      ] StrTestOpPlus.AddCharArray
+[       OK ] StrTestOpPlus.AddCharArray (20 ms)
+[----------] 1 test from StrTestOpPlus (28 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (73 ms total)
+[  PASSED  ] 1 test.
+==4413== 
+==4413== HEAP SUMMARY:
+==4413==     in use at exit: 72,704 bytes in 1 blocks
+==4413==   total heap usage: 426 allocs, 425 frees, 132,218 bytes allocated
+==4413== 
+==4413== LEAK SUMMARY:
+==4413==    definitely lost: 0 bytes in 0 blocks
+==4413==    indirectly lost: 0 bytes in 0 blocks
+==4413==      possibly lost: 0 bytes in 0 blocks
+==4413==    still reachable: 0 bytes in 0 blocks
+==4413==         suppressed: 72,704 bytes in 1 blocks
+==4413== 
+==4413== For counts of detected and suppressed errors, rerun with: -v
+==4413== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestRelationalOps.Equals</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestRelationalOps.Equals</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.Equals"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.959176</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.Equals"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4417== Memcheck, a memory error detector
+==4417== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4417== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4417== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestRelationalOps.Equals
+==4417== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestRelationalOps.Equals
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestRelationalOps
+[ RUN      ] StrTestRelationalOps.Equals
+[       OK ] StrTestRelationalOps.Equals (9 ms)
+[----------] 1 test from StrTestRelationalOps (15 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (44 ms total)
+[  PASSED  ] 1 test.
+==4417== 
+==4417== HEAP SUMMARY:
+==4417==     in use at exit: 72,704 bytes in 1 blocks
+==4417==   total heap usage: 426 allocs, 425 frees, 132,226 bytes allocated
+==4417== 
+==4417== LEAK SUMMARY:
+==4417==    definitely lost: 0 bytes in 0 blocks
+==4417==    indirectly lost: 0 bytes in 0 blocks
+==4417==      possibly lost: 0 bytes in 0 blocks
+==4417==    still reachable: 0 bytes in 0 blocks
+==4417==         suppressed: 72,704 bytes in 1 blocks
+==4417== 
+==4417== For counts of detected and suppressed errors, rerun with: -v
+==4417== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestRelationalOps.Neq</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestRelationalOps.Neq</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.Neq"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.843449</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.Neq"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4418== Memcheck, a memory error detector
+==4418== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4418== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4418== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestRelationalOps.Neq
+==4418== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestRelationalOps.Neq
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestRelationalOps
+[ RUN      ] StrTestRelationalOps.Neq
+[       OK ] StrTestRelationalOps.Neq (9 ms)
+[----------] 1 test from StrTestRelationalOps (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (44 ms total)
+[  PASSED  ] 1 test.
+==4418== 
+==4418== HEAP SUMMARY:
+==4418==     in use at exit: 72,704 bytes in 1 blocks
+==4418==   total heap usage: 426 allocs, 425 frees, 132,205 bytes allocated
+==4418== 
+==4418== LEAK SUMMARY:
+==4418==    definitely lost: 0 bytes in 0 blocks
+==4418==    indirectly lost: 0 bytes in 0 blocks
+==4418==      possibly lost: 0 bytes in 0 blocks
+==4418==    still reachable: 0 bytes in 0 blocks
+==4418==         suppressed: 72,704 bytes in 1 blocks
+==4418== 
+==4418== For counts of detected and suppressed errors, rerun with: -v
+==4418== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestRelationalOps.LessThanGreaterThan</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestRelationalOps.LessThanGreaterThan</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.LessThanGreaterThan"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.867196</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestRelationalOps.LessThanGreaterThan"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4419== Memcheck, a memory error detector
+==4419== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4419== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4419== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestRelationalOps.LessThanGreaterThan
+==4419== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestRelationalOps.LessThanGreaterThan
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestRelationalOps
+[ RUN      ] StrTestRelationalOps.LessThanGreaterThan
+[       OK ] StrTestRelationalOps.LessThanGreaterThan (12 ms)
+[----------] 1 test from StrTestRelationalOps (18 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (49 ms total)
+[  PASSED  ] 1 test.
+==4419== 
+==4419== HEAP SUMMARY:
+==4419==     in use at exit: 72,704 bytes in 1 blocks
+==4419==   total heap usage: 425 allocs, 424 frees, 132,538 bytes allocated
+==4419== 
+==4419== LEAK SUMMARY:
+==4419==    definitely lost: 0 bytes in 0 blocks
+==4419==    indirectly lost: 0 bytes in 0 blocks
+==4419==      possibly lost: 0 bytes in 0 blocks
+==4419==    still reachable: 0 bytes in 0 blocks
+==4419==         suppressed: 72,704 bytes in 1 blocks
+==4419== 
+==4419== For counts of detected and suppressed errors, rerun with: -v
+==4419== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestPlusEq.PlusEqStr</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestPlusEq.PlusEqStr</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqStr"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.882982</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqStr"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4420== Memcheck, a memory error detector
+==4420== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4420== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4420== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestPlusEq.PlusEqStr
+==4420== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestPlusEq.PlusEqStr
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestPlusEq
+[ RUN      ] StrTestPlusEq.PlusEqStr
+[       OK ] StrTestPlusEq.PlusEqStr (13 ms)
+[----------] 1 test from StrTestPlusEq (19 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (51 ms total)
+[  PASSED  ] 1 test.
+==4420== 
+==4420== HEAP SUMMARY:
+==4420==     in use at exit: 72,704 bytes in 1 blocks
+==4420==   total heap usage: 426 allocs, 425 frees, 132,200 bytes allocated
+==4420== 
+==4420== LEAK SUMMARY:
+==4420==    definitely lost: 0 bytes in 0 blocks
+==4420==    indirectly lost: 0 bytes in 0 blocks
+==4420==      possibly lost: 0 bytes in 0 blocks
+==4420==    still reachable: 0 bytes in 0 blocks
+==4420==         suppressed: 72,704 bytes in 1 blocks
+==4420== 
+==4420== For counts of detected and suppressed errors, rerun with: -v
+==4420== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestPlusEq.PlusEqCharArray</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestPlusEq.PlusEqCharArray</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqCharArray"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.864542</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqCharArray"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4421== Memcheck, a memory error detector
+==4421== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4421== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4421== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestPlusEq.PlusEqCharArray
+==4421== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestPlusEq.PlusEqCharArray
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestPlusEq
+[ RUN      ] StrTestPlusEq.PlusEqCharArray
+[       OK ] StrTestPlusEq.PlusEqCharArray (13 ms)
+[----------] 1 test from StrTestPlusEq (19 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (48 ms total)
+[  PASSED  ] 1 test.
+==4421== 
+==4421== HEAP SUMMARY:
+==4421==     in use at exit: 72,704 bytes in 1 blocks
+==4421==   total heap usage: 425 allocs, 424 frees, 132,238 bytes allocated
+==4421== 
+==4421== LEAK SUMMARY:
+==4421==    definitely lost: 0 bytes in 0 blocks
+==4421==    indirectly lost: 0 bytes in 0 blocks
+==4421==      possibly lost: 0 bytes in 0 blocks
+==4421==    still reachable: 0 bytes in 0 blocks
+==4421==         suppressed: 72,704 bytes in 1 blocks
+==4421== 
+==4421== For counts of detected and suppressed errors, rerun with: -v
+==4421== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestPlusEq.PlusEqSelf</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestPlusEq.PlusEqSelf</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqSelf"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.852327</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestPlusEq.PlusEqSelf"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4422== Memcheck, a memory error detector
+==4422== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4422== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4422== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestPlusEq.PlusEqSelf
+==4422== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestPlusEq.PlusEqSelf
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestPlusEq
+[ RUN      ] StrTestPlusEq.PlusEqSelf
+[       OK ] StrTestPlusEq.PlusEqSelf (10 ms)
+[----------] 1 test from StrTestPlusEq (16 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (51 ms total)
+[  PASSED  ] 1 test.
+==4422== 
+==4422== HEAP SUMMARY:
+==4422==     in use at exit: 72,704 bytes in 1 blocks
+==4422==   total heap usage: 425 allocs, 424 frees, 132,203 bytes allocated
+==4422== 
+==4422== LEAK SUMMARY:
+==4422==    definitely lost: 0 bytes in 0 blocks
+==4422==    indirectly lost: 0 bytes in 0 blocks
+==4422==      possibly lost: 0 bytes in 0 blocks
+==4422==    still reachable: 0 bytes in 0 blocks
+==4422==         suppressed: 72,704 bytes in 1 blocks
+==4422== 
+==4422== For counts of detected and suppressed errors, rerun with: -v
+==4422== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestSize.ConstructorSizes</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestSize.ConstructorSizes</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.ConstructorSizes"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.23051</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.ConstructorSizes"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4426== Memcheck, a memory error detector
+==4426== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4426== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4426== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestSize.ConstructorSizes
+==4426== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestSize.ConstructorSizes
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestSize
+[ RUN      ] StrTestSize.ConstructorSizes
+[       OK ] StrTestSize.ConstructorSizes (23 ms)
+[----------] 1 test from StrTestSize (36 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (95 ms total)
+[  PASSED  ] 1 test.
+==4426== 
+==4426== HEAP SUMMARY:
+==4426==     in use at exit: 72,704 bytes in 1 blocks
+==4426==   total heap usage: 427 allocs, 426 frees, 132,230 bytes allocated
+==4426== 
+==4426== LEAK SUMMARY:
+==4426==    definitely lost: 0 bytes in 0 blocks
+==4426==    indirectly lost: 0 bytes in 0 blocks
+==4426==      possibly lost: 0 bytes in 0 blocks
+==4426==    still reachable: 0 bytes in 0 blocks
+==4426==         suppressed: 72,704 bytes in 1 blocks
+==4426== 
+==4426== For counts of detected and suppressed errors, rerun with: -v
+==4426== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestSize.AdditionSizes</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestSize.AdditionSizes</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.AdditionSizes"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.00482</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.AdditionSizes"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4427== Memcheck, a memory error detector
+==4427== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4427== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4427== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestSize.AdditionSizes
+==4427== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestSize.AdditionSizes
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestSize
+[ RUN      ] StrTestSize.AdditionSizes
+[       OK ] StrTestSize.AdditionSizes (13 ms)
+[----------] 1 test from StrTestSize (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (51 ms total)
+[  PASSED  ] 1 test.
+==4427== 
+==4427== HEAP SUMMARY:
+==4427==     in use at exit: 72,704 bytes in 1 blocks
+==4427==   total heap usage: 430 allocs, 429 frees, 132,234 bytes allocated
+==4427== 
+==4427== LEAK SUMMARY:
+==4427==    definitely lost: 0 bytes in 0 blocks
+==4427==    indirectly lost: 0 bytes in 0 blocks
+==4427==      possibly lost: 0 bytes in 0 blocks
+==4427==    still reachable: 0 bytes in 0 blocks
+==4427==         suppressed: 72,704 bytes in 1 blocks
+==4427== 
+==4427== For counts of detected and suppressed errors, rerun with: -v
+==4427== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestSize.SizeTracking</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestSize.SizeTracking</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.SizeTracking"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.891942</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestSize.SizeTracking"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4428== Memcheck, a memory error detector
+==4428== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4428== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4428== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestSize.SizeTracking
+==4428== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestSize.SizeTracking
+[==========] Running 0 tests from 0 test cases.
+[==========] 0 tests from 0 test cases ran. (24 ms total)
+[  PASSED  ] 0 tests.
+==4428== 
+==4428== HEAP SUMMARY:
+==4428==     in use at exit: 72,704 bytes in 1 blocks
+==4428==   total heap usage: 411 allocs, 410 frees, 128,205 bytes allocated
+==4428== 
+==4428== LEAK SUMMARY:
+==4428==    definitely lost: 0 bytes in 0 blocks
+==4428==    indirectly lost: 0 bytes in 0 blocks
+==4428==      possibly lost: 0 bytes in 0 blocks
+==4428==    still reachable: 0 bytes in 0 blocks
+==4428==         suppressed: 72,704 bytes in 1 blocks
+==4428== 
+==4428== For counts of detected and suppressed errors, rerun with: -v
+==4428== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestIndexing.NormalIndex</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestIndexing.NormalIndex</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIndexing.NormalIndex"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.859312</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIndexing.NormalIndex"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4429== Memcheck, a memory error detector
+==4429== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4429== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4429== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestIndexing.NormalIndex
+==4429== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestIndexing.NormalIndex
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestIndexing
+[ RUN      ] StrTestIndexing.NormalIndex
+[       OK ] StrTestIndexing.NormalIndex (12 ms)
+[----------] 1 test from StrTestIndexing (17 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (50 ms total)
+[  PASSED  ] 1 test.
+==4429== 
+==4429== HEAP SUMMARY:
+==4429==     in use at exit: 72,704 bytes in 1 blocks
+==4429==   total heap usage: 424 allocs, 423 frees, 132,221 bytes allocated
+==4429== 
+==4429== LEAK SUMMARY:
+==4429==    definitely lost: 0 bytes in 0 blocks
+==4429==    indirectly lost: 0 bytes in 0 blocks
+==4429==      possibly lost: 0 bytes in 0 blocks
+==4429==    still reachable: 0 bytes in 0 blocks
+==4429==         suppressed: 72,704 bytes in 1 blocks
+==4429== 
+==4429== For counts of detected and suppressed errors, rerun with: -v
+==4429== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestIndexing.IndexOutOfRange</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestIndexing.IndexOutOfRange</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIndexing.IndexOutOfRange"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.9046</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIndexing.IndexOutOfRange"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4430== Memcheck, a memory error detector
+==4430== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4430== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4430== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestIndexing.IndexOutOfRange
+==4430== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestIndexing.IndexOutOfRange
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestIndexing
+[ RUN      ] StrTestIndexing.IndexOutOfRange
+[       OK ] StrTestIndexing.IndexOutOfRange (40 ms)
+[----------] 1 test from StrTestIndexing (47 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (78 ms total)
+[  PASSED  ] 1 test.
+==4430== 
+==4430== HEAP SUMMARY:
+==4430==     in use at exit: 72,704 bytes in 1 blocks
+==4430==   total heap usage: 426 allocs, 425 frees, 132,458 bytes allocated
+==4430== 
+==4430== LEAK SUMMARY:
+==4430==    definitely lost: 0 bytes in 0 blocks
+==4430==    indirectly lost: 0 bytes in 0 blocks
+==4430==      possibly lost: 0 bytes in 0 blocks
+==4430==    still reachable: 0 bytes in 0 blocks
+==4430==         suppressed: 72,704 bytes in 1 blocks
+==4430== 
+==4430== For counts of detected and suppressed errors, rerun with: -v
+==4430== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrTestIOStream.PrintTest</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrTestIOStream.PrintTest</FullName>
+			<FullCommandLine>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIOStream.PrintTest"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.914112</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/valgrind "--tool=memcheck" "--leak-check=yes" "--trace-children=no" "/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests" "--gtest_filter=StrTestIOStream.PrintTest"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>==4431== Memcheck, a memory error detector
+==4431== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==4431== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==4431== Command: /home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_tests --gtest_filter=StrTestIOStream.PrintTest
+==4431== 
+Running main() from gtest_main.cc
+Note: Google Test filter = StrTestIOStream.PrintTest
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrTestIOStream
+[ RUN      ] StrTestIOStream.PrintTest
+[       OK ] StrTestIOStream.PrintTest (40 ms)
+[----------] 1 test from StrTestIOStream (46 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (77 ms total)
+[  PASSED  ] 1 test.
+==4431== 
+==4431== HEAP SUMMARY:
+==4431==     in use at exit: 72,704 bytes in 1 blocks
+==4431==   total heap usage: 430 allocs, 429 frees, 149,700 bytes allocated
+==4431== 
+==4431== LEAK SUMMARY:
+==4431==    definitely lost: 0 bytes in 0 blocks
+==4431==    indirectly lost: 0 bytes in 0 blocks
+==4431==      possibly lost: 0 bytes in 0 blocks
+==4431==    still reachable: 0 bytes in 0 blocks
+==4431==         suppressed: 72,704 bytes in 1 blocks
+==4431== 
+==4431== For counts of detected and suppressed errors, rerun with: -v
+==4431== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<Test Status="passed">
+			<Name>StrRuntime.Concatenate</Name>
+			<Path>./str_tests</Path>
+			<FullName>./str_tests/StrRuntime.Concatenate</FullName>
+			<FullCommandLine>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_runtime_tests "--gtest_filter=StrRuntime.Concatenate"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.210551</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/cs104/CS_104/hw-xiaoyanq/hw1/hw1_tests/str_tests/str_runtime_tests "--gtest_filter=StrRuntime.Concatenate"</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Running main() from gtest_main.cc
+Note: Google Test filter = StrRuntime.Concatenate
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from StrRuntime
+[ RUN      ] StrRuntime.Concatenate
+&gt;&gt; Evaluating runtime of Str::operator+()
+Testing if time complexity could be linear...
+Correlation factor (1.6502) is &gt;= threshold (1.4000)
+&gt;&gt; Time complexity of Str::operator+() is likely linear
+Testing if time complexity could be constant...
+Correlation factor (-1.5413) is &lt; threshold (1.4000)
+Testing if time complexity could be logarithmic...
+Correlation factor (-1.0657) is &lt; threshold (1.4000)
+Testing if time complexity could be linearithmic...
+Correlation factor (0.7536) is &lt; threshold (1.4000)
+Testing if time complexity could be quadratic...
+Correlation factor (0.7786) is &lt; threshold (1.4000)
+Testing if time complexity could be cubic...
+Correlation factor (0.4707) is &lt; threshold (1.4000)
+[       OK ] StrRuntime.Concatenate (205 ms)
+[----------] 1 test from StrRuntime (205 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (205 ms total)
+[  PASSED  ] 1 test.
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jun 04 20:01 PDT</EndDateTime>
+		<EndTestTime>1559703713</EndTestTime>
+		<ElapsedMinutes>0.6</ElapsedMinutes>
+	</Testing>
+</Site>

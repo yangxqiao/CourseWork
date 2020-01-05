@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cs104/CS_104/hw-xiaoyanq/hw1/sum_pairs.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+

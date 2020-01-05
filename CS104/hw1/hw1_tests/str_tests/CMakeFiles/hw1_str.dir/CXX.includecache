@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cs104/CS_104/hw-xiaoyanq/hw1/str.cpp
+iostream
+-
+stdexcept
+-
+cstring
+-
+str.h
+/home/cs104/CS_104/hw-xiaoyanq/hw1/str.h
+
+/home/cs104/CS_104/hw-xiaoyanq/hw1/str.h
+iostream
+-
+
